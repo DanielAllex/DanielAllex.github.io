@@ -1,0 +1,123 @@
+﻿﻿
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Research</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="Research_CR.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <a id="Home"></a>
+    <div class="itemHeader">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="index.html" class="leftMenus">DANIEL ALLEX</a>
+        <p class="rightMenus"><a class="rightURL" href="about.html">About Me</a><a class="rightURL" href="Research_AV.html">Research</a><a class="rightURL" href="experience.html">Experience</a><a class="rightURL" href="#features">Contact</a></p>
+    </div>
+    <div id="sideNav"><a class="MajorBlock" href="">&nbsp;About Me</a><a class="MajorBlock">&nbsp;Research <span class="smallcaret">&#9660;</span></a><a class="block" href="Research_AV.html">&nbsp;Autonomous<br />&nbsp;Vehicles</a><a href="Research_AI.html" class="block">&nbsp;Artificial<br />&nbsp;Intelligence</a><a class="block" href="Research_CC.html">&nbsp;Cloud<br />&nbsp;Computing</a><a href="Research_Hacking.html" class="block">&nbsp;Hacking</a><a href="Research_BTC.html" class="block">&nbsp;Bitcoin</a><a style="background-color: #ffee58" class="block">&nbsp;Career<br />&nbsp;Research</a></div>
+    <div id="completeContainer" class="grid-container">
+        <div id="Container" class="table2"><center id="about"><b class="topText">Software Engineering: A Career Refining the Future (Research Paper)</b><br /><br />After conducting research on multiple careers, I have decided that I want to be a software engineer. In this MLA Research Paper, I consider the positives and negatives toward this career choice, looking at many different perspectives of what this career is really like.<br /><br /><br /><a class="belowButton" onclick="" style="color: black;" href="pdfCollection/SEResearchPaper.pdf">PDF</a><br /><a class="belowButton" onclick="" style="color: black;" href="pdfCollection/SEWC.pdf">References</a></center></div>
+
+        <div id="footer1" class="item5"><center><p class="contact">© 2023 by Daniel Allex</p></center></div>
+        <div id="footer2" class="footer2"><center><p class="contact"><b><a href="index.html" class="footerText">Daniel Allex</a></b><br /><a class="footerText" href="">About Me</a><br /><a class="footerText" href="Research_AV.html">Research</a><br /><a class="footerText" href="">Experience</a><br /></p></center></div>
+        <div id="footer3" class="footer3"><center><p class="contact"><b>Contact Me</b><br />Phone: 732-519-1891<br />Email: <a class="footerText" href="mailto:DanielAllex4@gmail.com">DanielAllex4@gmail.com</a><br /></p></div>
+    </div>
+
+
+</body>
+</html>
+
+<script>
+
+
+
+    function myFunction() {
+        var x = document.getElementById("sideNav");
+
+
+        if (x.style.display === "block") {
+            x.style.display = "none";
+            document.getElementById("completeContainer").style.display = "grid";
+            document.getElementById("completeContainer").style.marginLeft = "0px";
+            document.getElementById("completeContainer").style.width = "100%";
+
+        } else {
+            x.style.display = "block";
+            document.getElementById("completeContainer").style.width = "100%"
+            x.style.width = "100%";
+
+        }
+    }
+
+    
+            if (window.innerWidth < 800) {
+            document.getElementById("sideNav").style.display = "none";
+            document.getElementById("completeContainer").style.display = "grid";
+            document.getElementById("completeContainer").style.marginLeft = "0px";
+            document.getElementById("completeContainer").style.width = "100%";
+        }
+        else {
+            document.getElementById("sideNav").style.display = "block";
+            document.getElementById("completeContainer").style.display = "grid";
+            document.getElementById("sideNav").style.width = "100px";
+            document.getElementById("completeContainer").style.marginLeft = "100px";
+            document.getElementById("completeContainer").style.width = "calc(100% - 100px)";
+        }
+
+
+    var body = document.body,
+    html = document.documentElement;
+    var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+        if (height == window.innerHeight) {
+            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 158 - document.getElementById("footer1").offsetHeight) + "px";
+        }
+        else {
+            if (window.innerHeight > 236 + document.getElementById("about").offsetHeight) {
+                document.getElementById("Container").style.height = (window.innerHeight - 158 - document.getElementById("footer1").offsetHeight);
+            }
+            else {
+                document.getElementById("Container").style.height = (height - document.getElementById("Container").offsetHeight - 158 - document.getElementById("footer1").offsetHeight);
+            }
+    }
+
+    var pastWidth;
+    window.onresize = function () {
+        if (window.innerWidth < 800) {
+            if (document.getElementById("sideNav").style.width != "100%") {
+                document.getElementById("sideNav").style.display = "none";
+                document.getElementById("completeContainer").style.marginLeft = "0px";
+                document.getElementById("completeContainer").style.width = "100%";
+                pastWidth = window.innerWidth;
+            }
+        }
+        else {
+            document.getElementById("sideNav").style.display = "block";
+            document.getElementById("sideNav").style.width = "100px";
+            document.getElementById("completeContainer").style.display = "grid";
+            document.getElementById("completeContainer").style.marginLeft = "100px";
+            document.getElementById("completeContainer").style.width = "calc(100% - 100px)";
+        }
+
+        var body = document.body,
+            html = document.documentElement;
+        var height = Math.max(body.scrollHeight, body.offsetHeight,
+            html.clientHeight, html.scrollHeight, html.offsetHeight);
+        if (height == window.innerHeight) {
+            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 158 - document.getElementById("footer1").offsetHeight) + "px";
+        }
+        else {
+            if (window.innerHeight > 236 + document.getElementById("about").offsetHeight) {
+                document.getElementById("Container").style.height = (window.innerHeight - 158 - document.getElementById("footer1").offsetHeight);
+            }
+            else {
+                document.getElementById("Container").style.height = (height - document.getElementById("Container").offsetHeight - 158 - document.getElementById("footer1").offsetHeight);
+            }
+        }
+
+    }
+</script>
