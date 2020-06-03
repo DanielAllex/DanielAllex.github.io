@@ -70,7 +70,11 @@ iframe {
     height: calc(199.3333px + 4.166vw);
 }
 
-.smallcaret{
+#smallcaret{
+    font-size: 12px;
+}
+
+#smallcaretExp {
     font-size: 12px;
 }
 
@@ -94,8 +98,21 @@ iframe {
     text-decoration: none;
 }
 
-.MajorBlock {
+#selectedBlock {
     display: block;
+    background-color: #ffee58;
+    opacity: 0.7;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 10px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    color: black;
+    text-decoration: none;
+}
+
+.MajorBlock {
+    display: none;
     background-color: #eeeeee;
     opacity: 0.7;
     padding-top: 6px;
@@ -112,6 +129,18 @@ iframe {
         text-decoration: none;
         cursor: pointer;
     }
+
+.MajorBlock:hover {
+    background-color: #b0bec5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#selectedBlock:hover {
+    background-color: #fdd835;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 #Home {
 }
@@ -503,5 +532,21 @@ html {
         text-align: center;
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+
+    .MajorBlock {
+        display: block;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    #selectedBlock {
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .rightMenus{
+        display: none;
     }
 }
