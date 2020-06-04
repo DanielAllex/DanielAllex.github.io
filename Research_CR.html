@@ -76,11 +76,14 @@
             document.getElementById("completeContainer").style.display = "grid";
             document.getElementById("completeContainer").style.marginLeft = "0px";
             document.getElementById("completeContainer").style.width = "100%";
+            x.style.paddingRight = "10px";
 
         } else {
             x.style.display = "block";
             document.getElementById("completeContainer").style.width = "100%"
+            document.getElementById("completeContainer").style.display = "none";
             x.style.width = "100%";
+            x.style.paddingRight = "0px";
 
         }
     }
@@ -91,6 +94,7 @@
             document.getElementById("completeContainer").style.display = "grid";
             document.getElementById("completeContainer").style.marginLeft = "0px";
             document.getElementById("completeContainer").style.width = "100%";
+            document.getElementById("sideNav").style.paddingRight = "10px";
         }
             else {
                 var y = document.getElementsByClassName("block");
@@ -101,6 +105,7 @@
             document.getElementById("sideNav").style.display = "block";
             document.getElementById("completeContainer").style.display = "grid";
             document.getElementById("sideNav").style.width = "100px";
+            document.getElementById("sideNav").style.paddingRight = "10px";
             document.getElementById("completeContainer").style.marginLeft = "100px";
             document.getElementById("completeContainer").style.width = "calc(100% - 100px)";
         }
@@ -127,6 +132,7 @@
         if (window.innerWidth < 800) {
             if (document.getElementById("sideNav").style.width != "100%") {
                 document.getElementById("sideNav").style.display = "none";
+                document.getElementById("sideNav").style.paddingRight = "10px";
                 document.getElementById("completeContainer").style.marginLeft = "0px";
                 document.getElementById("completeContainer").style.width = "100%";
                 pastWidth = window.innerWidth;
@@ -140,6 +146,7 @@
                 }
             document.getElementById("sideNav").style.display = "block";
             document.getElementById("sideNav").style.width = "100px";
+            document.getElementById("sideNav").style.paddingRight = "10px";
             document.getElementById("completeContainer").style.display = "grid";
             document.getElementById("completeContainer").style.marginLeft = "100px";
             document.getElementById("completeContainer").style.width = "calc(100% - 100px)";
