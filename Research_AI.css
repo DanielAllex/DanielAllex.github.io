@@ -1,11 +1,38 @@
 body {
     margin: 0;
     padding: 0;
+    position: relative;
+}
 
+#Container {
+}
+
+#footer1 {
+}
+
+#footer2 {
+}
+
+#footer3 {
 }
 
 
-.about {
+
+#completeContainer {
+}
+
+.icon {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white;
+    font-size: calc(25px + 0.5vw);
+    margin-top: calc(22px + 0.2vw);
+    margin-left: 10px;
+}
+
+#about {
     margin-left: 20px;
     margin-right: 20px;
     width: calc(100% - 40px);
@@ -21,10 +48,11 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.sideNav {
+#sideNav {
+    display: block;
     background-color: #bdbdbd;
     color: black;
-    height: 100%;
+    height: calc(100% - 62px);
     width: 100px;
     padding-right: 10px;
     font-family: Arial;
@@ -32,25 +60,59 @@ body {
     position: fixed;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 99;
+    margin-top: 62px;
 }
 
-iframe {
-    float:left;
+#slides {
+    float: left;
     margin-left: 20px;
-    width: calc(296px + 7.4vw);
-    height: calc(199.3333px + 4.166vw);
+    width: calc(250px + 22%);
 }
 
-.buttonBox {
+#smallcaret{
+    font-size: 12px;
+}
+
+#smallcaretExp {
+    font-size: 12px;
+}
+
+#buttonBox {
     width: 200px;
     margin-left: 20px;
     vertical-align: top;
-    float:left;
+    float: left;
 }
 
 .block {
     display: block;
     background-color: #bdbdbd;
+    opacity: 0.7;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 10px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    color: black;
+    text-decoration: none;
+}
+
+#selectedBlock {
+    display: block;
+    background-color: #ffee58;
+    opacity: 0.7;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 10px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    color: black;
+    text-decoration: none;
+}
+
+.MajorBlock {
+    display: none;
+    background-color: #eeeeee;
     opacity: 0.7;
     padding-top: 6px;
     padding-bottom: 6px;
@@ -67,11 +129,31 @@ iframe {
         cursor: pointer;
     }
 
+.MajorBlock:hover {
+    background-color: #b0bec5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#selectedBlock:hover {
+    background-color: #fdd835;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 #Home {
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+.contact {
+    color: White;
+    font-size: calc(11px + 0.5vw);
+    font-family: Arial;
+    margin-right: 23px;
+    margin-left: 23px;
 }
 
 .item2 {
@@ -81,7 +163,6 @@ html {
     height: 500px;
     margin: 0;
     padding: 0;
-
 }
 
 .table1 {
@@ -89,9 +170,8 @@ html {
     background-color: #f5f5f5;
     color: black;
     padding: 20px 20px;
-    min-height: calc(96vh - 200px);
+    border-bottom: 1px solid black;
 }
-
 
 .info {
     width: calc(100% - 380px - 12vw);
@@ -108,14 +188,6 @@ html {
     margin-left: 20px;
 }
 
-.contact {
-    color: White;
-    font-size: calc(11px + 0.5vw);
-    font-family: Arial;
-    margin-right: 23px;
-    margin-left: 23px;
-}
-
 .topText {
     font-size: 30px;
     margin-left: 20px;
@@ -130,6 +202,20 @@ html {
 #features {
 }
 
+.belowButton {
+    display: block;
+    background-color: #bdbdbd;
+    text-align: center;
+    text-decoration: none;
+    width: 180px;
+    padding: 12px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+    .belowButton:hover {
+        background-color: #ffee58;
+    }
+
 .detailsButton {
     background-color: #bdbdbd;
     display: block;
@@ -143,7 +229,6 @@ html {
     .detailsButton:hover {
         background-color: #ffee58;
     }
-
 
 #learnButton {
     background-color: #f5f5f5;
@@ -176,12 +261,10 @@ html {
 
 .table2 {
     grid-area: t2;
-    background-color: #bdbdbd;
+    background-color: #f5f5f5;
     color: black;
-    padding: 80px 20px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    padding: 40px 20px;
+
 }
 
 .topImg {
@@ -220,8 +303,7 @@ html {
 }
 
 .grid-container {
-    position: relative;
-    margin-top: 80px;
+    margin-top: 60px;
     margin-left: 100px;
     width: calc(100% - 100px);
     display: grid;
@@ -246,15 +328,18 @@ html {
 
 .rightMenus {
     color: White;
-    font-size: calc(11px + 0.5vw);
+    font-size: calc(10px + 0.5vw);
     float: right;
-    padding-right: 20px;
+    padding-right: 15px;
     margin-top: calc(29px + 0.1vw);
     font-family: Arial;
 }
 
 .rightURL {
     color: white;
+    padding-left: 5px;
+    padding-right:calc(4px + 1vw);
+
 }
 
     .rightURL:hover {
@@ -318,7 +403,6 @@ html {
         color: white;
         text-decoration: none;
     }
-
 
 .footerText {
     color: white;
@@ -394,12 +478,19 @@ html {
         vertical-align: top;
     }
 
-    .buttonBox {
+    #buttonBox {
         width: 100%;
         vertical-align: top;
     }
 
-    iframe {
+    #slides {
+        margin-right: 40px;
+        width: calc(100% - 40px);
+    }
+
+    .belowButton {
+        width: auto;
+        display: block;
     }
 
     .detailsButton {
@@ -417,5 +508,48 @@ html {
         -webkit-order: 1;
         order: 1;
         vertical-align: top;
+    }
+
+    #sideNav {
+        display: none;
+        position: absolute;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    .grid-container {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .leftMenus {
+        margin-left: 45px;
+    }
+
+    .block {
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 0px;
+    }
+
+    .MajorBlock {
+        display: block;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 0px;
+    }
+
+    #selectedBlock {
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 0px;
+    }
+    .rightMenus{
+        display: none;
     }
 }
