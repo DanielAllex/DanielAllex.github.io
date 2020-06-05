@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-
 }
 
 #Container {
@@ -484,7 +483,6 @@ html {
     }
 
     #slides {
-        margin-right: 40px;
         width: calc(100% - 40px);
     }
 
