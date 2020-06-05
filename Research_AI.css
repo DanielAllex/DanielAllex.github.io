@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden
 }
 
 #Container {
@@ -146,7 +145,6 @@ body {
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden
 }
 
 .contact {
@@ -441,7 +439,6 @@ html {
 
 @media only screen and (max-width: 800px) {
     .table2 {
-        flex-direction: column;
     }
 
     .table3 {
