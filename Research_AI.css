@@ -303,8 +303,7 @@ html {
 
 .grid-container {
     margin-top: 60px;
-    width: calc(100% - 100px);
-    margin-left: 100px;
+    width: calc(100%);
     display: grid;
     grid-template-areas: 't1 t1 t1 t1 t1 t1' 't2 t2 t2 t2 t2 t2' 't3 t3 t3 t3 t3 t3' 'footer footer f2 f2 f3 f3';
     background-color: #2196F3;
