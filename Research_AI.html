@@ -1,6 +1,5 @@
 ﻿﻿
-<html>
-<head>
+<html><head>
     <meta charset="utf-8">
     <title>Research</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -172,7 +171,11 @@
     if (window.innerWidth < 800)
         slideHeight = document.getElementById("slides").offsetHeight + document.getElementById("buttonBox").offsetHeight;
     else
-        slideHeight = Math.max(document.getElementById("slides").offsetHeight, document.getElementById("buttonBox").offsetHeight);
+            slideHeight = Math.max(document.getElementById("slides").offsetHeight, document.getElementById("buttonBox").offsetHeight);
+
+
+        document.getElementById("Container").style.minHeight = document.getElementById("about").offsetHeight + slideHeight + 10;
+
 
         var body = document.body,
             html = document.documentElement;
