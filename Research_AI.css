@@ -3,7 +3,6 @@ body {
     display: grid;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
 #Container {
@@ -40,7 +39,7 @@ body {
     width: calc(100% - 40px);
 }
 
-.itemHeader {
+#itemHeader {
     height: 80px;
     z-index: 100;
     width: 100%;
@@ -149,7 +148,6 @@ body {
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 .contact {
@@ -315,7 +313,6 @@ html {
     grid-template-areas: 't1 t1 t1 t1 t1 t1' 't2 t2 t2 t2 t2 t2' 't3 t3 t3 t3 t3 t3' 'footer footer f2 f2 f3 f3';
     background-color: #2196F3;
     max-width: 100%;
-    overflow-x: hidden;
 }
 
     .grid-container > div {

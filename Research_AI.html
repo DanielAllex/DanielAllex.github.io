@@ -9,7 +9,7 @@
 </head>
 <body>
 <a id="Home"></a>
-    <div class="itemHeader">
+    <div id="itemHeader">
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -136,6 +136,9 @@
             }
     }
 
+    if (document.getElementById("completeContainer").style.width == "100%")
+        document.getElementById("completeContainer").style.width = document.getElementById("itemHeader").offsetWidth;
+
     var pastWidth;
     window.onresize = function () {
         if (window.innerWidth < 800) {
@@ -197,6 +200,8 @@
                 console.log("c");
             }
         }
+            if (document.getElementById("completeContainer").style.width == "100%")
+                document.getElementById("completeContainer").style.width = document.getElementById("itemHeader").offsetWidth;
 
     }
 </script>
