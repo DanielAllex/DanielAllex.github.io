@@ -1,17 +1,14 @@
-﻿﻿
-<html>
-<head>
+﻿<head>
     <meta charset="utf-8">
-    <title>Research</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico">
+    <title>Daniel Allex</title>
     <link rel="stylesheet" type="text/css" href="Research_AI.css">
+    <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-
 <body>
-    <a id="Home"></a>
+<a id="Home"></a>
     <div class="itemHeader">
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
@@ -128,14 +125,14 @@
     var height = Math.max( body.scrollHeight, body.offsetHeight, 
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
         if (height == window.innerHeight) {
-            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 158 - document.getElementById("footer1").offsetHeight) + "px";
+            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 140 - document.getElementById("footer1").offsetHeight) + "px";
         }
         else {
-            if (window.innerHeight > 275 + document.getElementById("about").offsetHeight + slideHeight) {
-                document.getElementById("Container").style.height = (window.innerHeight - 158 - document.getElementById("footer1").offsetHeight);
+            if (window.innerHeight > 294 + document.getElementById("about").offsetHeight + slideHeight) {
+                document.getElementById("Container").style.height = (window.innerHeight - 140 - document.getElementById("footer1").offsetHeight);
             }
             else {
-                document.getElementById("Container").style.height = (height - 158 - document.getElementById("footer1").offsetHeight);
+                document.getElementById("Container").style.height = (height - 140 - document.getElementById("footer1").offsetHeight);
             }
     }
 
@@ -179,7 +176,7 @@
             slideHeight = Math.max(document.getElementById("slides").offsetHeight, document.getElementById("buttonBox").offsetHeight);
 
 
-        document.getElementById("Container").style.minHeight = document.getElementById("about").offsetHeight + slideHeight + 30;
+        document.getElementById("Container").style.minHeight = document.getElementById("about").offsetHeight + slideHeight + 20;
 
 
         var body = document.body,
@@ -187,14 +184,17 @@
         var height = Math.max(body.scrollHeight, body.offsetHeight,
             html.clientHeight, html.scrollHeight, html.offsetHeight);
         if (height == window.innerHeight) {
-            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 158 - document.getElementById("footer1").offsetHeight) + "px";
+            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 140 - document.getElementById("footer1").offsetHeight) + "px";
+            console.log("a");
         }
         else {
-            if (window.innerHeight > 275 + document.getElementById("about").offsetHeight + slideHeight) {
-                document.getElementById("Container").style.height = (window.innerHeight - 158 - document.getElementById("footer1").offsetHeight);
+            if (window.innerHeight > 294 + document.getElementById("about").offsetHeight + slideHeight) {
+                document.getElementById("Container").style.height = (window.innerHeight - 140 - document.getElementById("footer1").offsetHeight);
+                console.log("b");
             }
             else {
-                document.getElementById("Container").style.height = (height - 158 - document.getElementById("footer1").offsetHeight);
+                document.getElementById("Container").style.height = 50 + document.getElementById("about").offsetHeight + slideHeight;
+                console.log("c");
             }
         }
 

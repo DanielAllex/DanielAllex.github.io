@@ -53,7 +53,7 @@ body {
     display: block;
     background-color: #bdbdbd;
     color: black;
-    height: calc(100% - 62px);
+    height: calc(100% - 20px);
     width: 100px;
     padding-right: 10px;
     font-family: Arial;
@@ -61,7 +61,8 @@ body {
     position: fixed;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 99;
-    margin-top: 62px;
+    margin-top: 20px;
+
 }
 
 #slides {
@@ -513,6 +514,8 @@ html {
     #sideNav {
         display: none;
         position: absolute;
+        margin-top: 80px;
+        height: calc(100% - 80px);
     }
 
     .icon {
