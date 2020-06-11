@@ -1,7 +1,7 @@
 ﻿<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Daniel Allex</title>
+    <title>Artificial Intelligence</title>
     <link rel="stylesheet" type="text/css" href="Research_AI.css">
     <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -89,10 +89,10 @@
 
 
     if (window.innerWidth < 800) {
+            document.getElementById("sideNav").style.paddingRight = "10px";
             document.getElementById("sideNav").style.display = "none";
             document.getElementById("completeContainer").style.display = "grid";
             document.getElementById("completeContainer").style.width = "100%";
-                document.getElementById("sideNav").style.paddingRight = "10px";
                                 document.getElementById("completeContainer").style.marginLeft = "0px";
 
                                 document.getElementById("slides").style.height = document.getElementById("slides").offsetWidth * 0.562972973 + 28;
@@ -141,8 +141,8 @@
         if (window.innerWidth < 800) {
 
             if (document.getElementById("sideNav").style.width != "100%") {
-                document.getElementById("sideNav").style.display = "none";
                 document.getElementById("sideNav").style.paddingRight = "10px";
+                document.getElementById("sideNav").style.display = "none";
                 document.getElementById("completeContainer").style.marginLeft = "0px";
                 document.getElementById("completeContainer").style.width = "100%";
                 pastWidth = window.innerWidth;
