@@ -39,6 +39,7 @@ body {
 }
 
 .itemHeader {
+    overflow-x:hidden;
     height: 80px;
     z-index: 100;
     width: 100%;
@@ -304,6 +305,7 @@ html {
 }
 
 .grid-container {
+    overflow-x: hidden;
     margin-top: 60px;
     width: calc(100% - 100px);
     margin-left: 100px;
