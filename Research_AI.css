@@ -1,7 +1,9 @@
 body {
+    width: 100%;
+    display: grid;
     margin: 0;
     padding: 0;
-    width: 100%
+    overflow-x: hidden;
 }
 
 #Container {
@@ -53,7 +55,7 @@ body {
     display: block;
     background-color: #bdbdbd;
     color: black;
-    height: calc(100% - 20px);
+    height: calc(100% - 80px);
     width: 100px;
     padding-right: 10px;
     font-family: Arial;
@@ -61,8 +63,7 @@ body {
     position: fixed;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 99;
-    margin-top: 20px;
-
+    margin-top: 80px;
 }
 
 #slides {
@@ -148,6 +149,7 @@ body {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .contact {
@@ -309,9 +311,11 @@ html {
     width: calc(100% - 100px);
     margin-left: 100px;
     display: grid;
+    position: absolute;
     grid-template-areas: 't1 t1 t1 t1 t1 t1' 't2 t2 t2 t2 t2 t2' 't3 t3 t3 t3 t3 t3' 'footer footer f2 f2 f3 f3';
     background-color: #2196F3;
     max-width: 100%;
+    overflow-x: hidden;
 }
 
     .grid-container > div {
@@ -514,8 +518,6 @@ html {
     #sideNav {
         display: none;
         position: absolute;
-        margin-top: 80px;
-        height: calc(100% - 80px);
     }
 
     .icon {
