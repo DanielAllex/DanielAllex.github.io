@@ -1,26 +1,25 @@
-﻿﻿
-<html>
+﻿<html>
 <head>
     <meta charset="utf-8">
-    <title>Research</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sourcebook</title>
     <link rel="stylesheet" type="text/css" href="Research_SB.css">
+    <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-
 <body>
     <a id="Home"></a>
-    <div class="itemHeader">
+    <div id="itemHeader">
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
         <a href="index.html" class="leftMenus">DANIEL ALLEX</a>
         <p class="rightMenus">
-        <a class="rightURL" href="about.html">About Me</a>
-        <a class="rightURL" href="Research_AV.html">Research</a>
-        <a class="rightURL" href="experience.html">Experience</a>
-        <a class="rightURL" href="#features">Contact</a>
+            <a class="rightURL" href="about.html">About Me</a>
+            <a class="rightURL" href="Research_AV.html">Research</a>
+            <a class="rightURL" href="experience.html">Experience</a>
+            <a class="rightURL" href="#features">Contact</a>
         </p>
     </div>
     <div id="sideNav">
@@ -32,7 +31,7 @@
         <a href="Research_Hacking.html" class="block">&nbsp;Hacking</a>
         <a href="Research_BTC.html" class="block">&nbsp;Bitcoin</a>
         <a class="block" href="Research_CR.html">&nbsp;Career<br />&nbsp;Research</a>
-        <a id="selectedBlock" href="Research_SB.html">&nbsp;Sourcebook<br /></a>
+        <a href="Research_SB.html" id="selectedBlock">&nbsp;Sourcebook</a>
         <a class="MajorBlock" href="">&nbsp;Experience <span id="smallcaretExp">&#9660;</span></a>
         <a class="MajorBlock" href="">&nbsp;Contact</a>
     </div>
@@ -118,14 +117,14 @@
     var height = Math.max( body.scrollHeight, body.offsetHeight, 
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
         if (height == window.innerHeight) {
-            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 158 - document.getElementById("footer1").offsetHeight) + "px";
+            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 140 - document.getElementById("footer1").offsetHeight) + "px";
         }
         else {
-            if (window.innerHeight > 236 + document.getElementById("about").offsetHeight) {
-                document.getElementById("Container").style.height = (window.innerHeight - 158 - document.getElementById("footer1").offsetHeight);
+            if (window.innerHeight > 294 + document.getElementById("about").offsetHeight) {
+                document.getElementById("Container").style.height = (window.innerHeight - 140 - document.getElementById("footer1").offsetHeight);
             }
             else {
-                document.getElementById("Container").style.height = (height - document.getElementById("Container").offsetHeight - 158 - document.getElementById("footer1").offsetHeight);
+                document.getElementById("Container").style.height = (height - document.getElementById("Container").offsetHeight - 140 - document.getElementById("footer1").offsetHeight);
             }
     }
 
@@ -155,21 +154,25 @@
             document.getElementById("completeContainer").style.width = "calc(100% - 100px)";
         }
 
-        document.getElementById("Container").style.minHeight = document.getElementById("about").offsetHeight;
+                document.getElementById("Container").style.minHeight = document.getElementById("about").offsetHeight;
+
+
+        document.getElementById("Container").style.minHeight = document.getElementById("about").offsetHeight + 20;
+
 
         var body = document.body,
             html = document.documentElement;
         var height = Math.max(body.scrollHeight, body.offsetHeight,
             html.clientHeight, html.scrollHeight, html.offsetHeight);
         if (height == window.innerHeight) {
-            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 158 - document.getElementById("footer1").offsetHeight) + "px";
+            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 140 - document.getElementById("footer1").offsetHeight) + "px";
         }
         else {
-            if (window.innerHeight > 236 + document.getElementById("about").offsetHeight) {
-                document.getElementById("Container").style.height = (window.innerHeight - 158 - document.getElementById("footer1").offsetHeight);
+            if (window.innerHeight > 294 + document.getElementById("about").offsetHeight) {
+                document.getElementById("Container").style.height = (window.innerHeight - 140 - document.getElementById("footer1").offsetHeight);
             }
             else {
-                document.getElementById("Container").style.height = (height - document.getElementById("Container").offsetHeight - 158 - document.getElementById("footer1").offsetHeight);
+                document.getElementById("Container").style.height = (height - document.getElementById("Container").offsetHeight - 140 - document.getElementById("footer1").offsetHeight);
             }
         }
 
