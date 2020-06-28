@@ -107,6 +107,18 @@ body {
 
 }
 
+#LeftButtons {
+    width: 50%;
+    float: left;
+    display: inline-block;
+}
+
+#RightButtons {
+    width: 50%;
+    float: right;
+    display: inline-block;
+}
+
 .block {
     display: none;
     background-color: #bdbdbd;
@@ -212,7 +224,9 @@ html {
     display: block;
     text-align: center;
     text-decoration: none;
-    width: 190px;
+    margin-left: 10px;
+    margin-right:10px;
+    width:auto;
     padding: 12px 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

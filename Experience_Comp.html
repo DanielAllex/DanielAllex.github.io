@@ -40,7 +40,7 @@
         <a href="Experience_Extension.html" class="ExpBlock">&nbsp;Markup<br />&nbsp;Extension</a>
         <a href="Experience_GameDev.html" class="ExpBlock">&nbsp;Game<br />&nbsp;Development</a>
         <a href="Experience_Python.html" class="ExpBlock">&nbsp;Python<br />&nbsp;Classes</a>
-        <a href="Experience_ACSL.html" id="selectedBlock">&nbsp;ACSL</a>
+        <a href="Experience_ACSL.html" id="selectedBlock">&nbsp;Competitive<br />&nbsp;Programming</a>
         <a href="Experience_Robotics.html" class="ExpBlock">&nbsp;Robotics<br />&nbsp;Team</a>
         <a href="Experience_Hackathons.html" class="ExpBlock">&nbsp;Hackathons</a>
         <a href="Experience_Business.html" class="ExpBlock">&nbsp;Business<br />&nbsp;Pitch</a>
@@ -51,6 +51,7 @@
     <div id="completeContainer" class="grid-container">
         <div class="table2" id="Container"><center id="about" class="info">
     <b class="topText">ACSL</b><br><br>The American Computer Science League is a Computer Science competition where students answer questions on various computer science topics and complete programming long answer problems. For my first time competing in the ACSL, I competed in the Intermediate division. I received the full points for all of the programming parts for all 4 contests, and I learned about many different topics that are tested in the ACSL. I qualified for the Finals competition, and I placed within the top 26% of all qualifiers in my division. For my senior year, I plan to compete in the Senior Division. More about this competition including the tested topics can be found on this page.<br><br><br>
+    <b class="topText">ACSL Programming Problems</b><br><br /><div id="LeftButtons"><a class="detailsButton" style="color: black;" href="pdfCollection/ACSL_1.jpg">Contest 1</a><br /><a class="detailsButton" style="color: black;" href="pdfCollection/ACSL_1.jpg">Contest 2</a></div><div id="RightButtons"><a class="detailsButton" href="pdfCollection/NumberTransformation.java" style="color: black;">My solution</a></div>
 </center><div class="rightImg" id="buttonBox"><img class="topImg" id="slides" src="Images/ACSL.png"><br><br><center><a class="Experiencebutton" href="https://www.acsl.org/" style="color: black;"> Website </a><br /><a class="Experiencebutton" href="https://marc6888.wixsite.com/acsl/topics" style="color: black;"> Topics </a></center></div></div>
 
         <div id="footer1" class="item5"><center><p class="contact">© 2023 by Daniel Allex</p></center></div>
@@ -152,27 +153,6 @@
                 document.getElementById("completeContainer").style.width = "calc(100% - 100px)";
 
         }
-         var slideHeight;
-        if (window.innerWidth < 800)
-            slideHeight = document.getElementById("buttonBox").offsetHeight + document.getElementById("about").offsetHeight;
-        else
-            slideHeight = Math.max(document.getElementById("buttonBox").offsetHeight, document.getElementById("about").offsetHeight);
-
-    var body = document.body,
-    html = document.documentElement;
-    var height = Math.max( body.scrollHeight, body.offsetHeight, 
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
-        if (height == window.innerHeight) {
-            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 140 - document.getElementById("footer1").offsetHeight) + "px";
-        }
-        else {
-            if (window.innerHeight > 294 + slideHeight) {
-                document.getElementById("Container").style.height = (window.innerHeight - 140 - document.getElementById("footer1").offsetHeight);
-            }
-            else {
-                document.getElementById("Container").style.height = (height - 140 - document.getElementById("footer1").offsetHeight);
-            }
-    }
 
  if (document.getElementById("completeContainer").style.width == "100%")
             document.getElementById("completeContainer").style.width = document.getElementById("itemHeader").offsetWidth;
@@ -212,36 +192,6 @@
             document.getElementById("completeContainer").style.display = "grid";
             document.getElementById("completeContainer").style.marginLeft = "100px";
             document.getElementById("completeContainer").style.width = "calc(100% - 100px)";
-        }
-
-
-        var slideHeight;
-        if (window.innerWidth < 800)
-            slideHeight = document.getElementById("buttonBox").offsetHeight + document.getElementById("about").offsetHeight;
-        else
-            slideHeight = Math.max(document.getElementById("buttonBox").offsetHeight, document.getElementById("about").offsetHeight);
-    
-
-        document.getElementById("Container").style.minHeight = slideHeight + 20;
-
-
-        var body = document.body,
-            html = document.documentElement;
-        var height = Math.max(body.scrollHeight, body.offsetHeight,
-            html.clientHeight, html.scrollHeight, html.offsetHeight);
-        if (height == window.innerHeight) {
-            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 140 - document.getElementById("footer1").offsetHeight) + "px";
-            console.log("a");
-        }
-        else {
-            if (window.innerHeight > 294 + slideHeight) {
-                document.getElementById("Container").style.height = (window.innerHeight - 140 - document.getElementById("footer1").offsetHeight);
-                console.log("b");
-            }
-            else {
-                document.getElementById("Container").style.height = 50 + slideHeight;
-                console.log("c");
-            }
         }
  if (document.getElementById("completeContainer").style.width == "100%")
             document.getElementById("completeContainer").style.width = document.getElementById("itemHeader").offsetWidth;
