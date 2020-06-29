@@ -23,8 +23,9 @@ body {
 }
 
 .info {
-    width: calc(100% - 180px - 12vw);
+    width: calc(100% - 190px - 12vw);
     float: left;
+    margin-left: 10px;
 }
 
 .icon {
