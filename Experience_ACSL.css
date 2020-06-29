@@ -39,7 +39,9 @@ body {
 }
 
 #about {
-
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc(100% - 40px);
 }
 
 #itemHeader {
@@ -107,17 +109,16 @@ body {
 
 }
 
-#LeftButtons {
-    width: 50%;
-    float: left;
-    display: inline-block;
+table {
+    width: auto;
+    font-size: calc(20px + 0.25vw);
 }
 
-#RightButtons {
-    width: 50%;
-    float: right;
-    display: inline-block;
+td{
+    padding: 10px 10px;
+    height: 1px;
 }
+
 
 .block {
     display: none;
@@ -221,12 +222,16 @@ html {
 
 .detailsButton {
     background-color: #bdbdbd;
-    display: block;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     text-decoration: none;
     margin-left: 10px;
-    margin-right:10px;
-    width:auto;
+    margin-right: 10px;
+    width: auto;
+    height: 100%;
     padding: 12px 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -235,8 +240,33 @@ html {
         background-color: #ffee58;
     }
 
+.belowButton {
+    display: block;
+    background-color: #bdbdbd;
+    text-align: center;
+    text-decoration: none;
+    width: 180px;
+    padding: 12px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+    .belowButton:hover {
+        background-color: #ffee58;
+    }
+
 .table2 {
     grid-area: t2;
+    background-color: #f5f5f5;
+    color: black;
+    padding: 40px 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-bottom: 1px solid black;
+}
+
+.table3 {
+    grid-area: t3;
     background-color: #f5f5f5;
     color: black;
     padding: 40px 20px;
@@ -271,7 +301,7 @@ html {
     margin-left: 100px;
     display: grid;
     position: absolute;
-    grid-template-areas: 't1 t1 t1 t1 t1 t1' 't2 t2 t2 t2 t2 t2' 't3 t3 t3 t3 t3 t3' 'footer footer f2 f2 f3 f3';
+    grid-template-areas: 't2 t2 t2 t2 t2 t2' 't3 t3 t3 t3 t3 t3' 'footer footer f2 f2 f3 f3';
     background-color: #2196F3;
     max-width: 100%;
 }
@@ -403,7 +433,7 @@ html {
     }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .table2 {
         flex-direction: column;
     }
@@ -493,6 +523,12 @@ html {
         padding-bottom: 10px;
         padding-right: 0px;
     }
+
+    .belowButton {
+        width: auto;
+        display: block;
+    }
+
 
 
 }
