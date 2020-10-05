@@ -50,10 +50,29 @@ body {
     z-index: 99;
     margin-top: 80px;
 }
-#slides {
+
+.Slides {
     float: left;
     margin-left: 20px;
-    width: calc(250px + 22%);
+    margin-right: 20px;
+    width: calc(90% - 40px);
+    max-width: 600px;
+}
+
+.Videos {
+    float: left;
+    margin-right: 20px;
+    margin-left: calc(10% + 20px);
+    width: calc(90% - 40px);
+    max-width: 600px;
+}
+
+#VideoLeft {
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc(90% - 40px);
+    max-width: 600px;
 }
 
 #smallcaret {
@@ -63,11 +82,34 @@ body {
     font-size: 12px;
 }
 
-#buttonBox {
-    width: 200px;
-    margin-left: 20px;
-    vertical-align: top;
+.leftSlideBox{
+    width: 50%;
     float: left;
+}
+
+.rightSlideBox {
+    width: 50%;
+    float: right;
+}
+
+.buttonBoxLeft {
+    float: left;
+    clear: both;
+    vertical-align: top;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc(90% - 40px);
+    max-width: 600px;
+}
+
+.buttonBoxRight {
+    float: left;
+    clear: both;
+    vertical-align: top;
+    margin-left: calc(10% + 20px);
+    margin-right: 20px;
+    width: calc(90% - 40px);
+    max-width: 600px;
 }
 
 .block {
@@ -166,12 +208,64 @@ html {
     background-color: #f5f5f5;
     color: black;
     padding: 20px 20px;
-    border-bottom: 1px solid black;
+}
+
+.table2 {
+    grid-area: t2;
+    background-color: #f5f5f5;
+    color: black;
+    padding: 20px 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.table3 {
+    grid-area: t3;
+    background-color: #f5f5f5;
+    color: black;
+    padding: 20px 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.table4 {
+    grid-area: t4;
+    background-color: #f5f5f5;
+    color: black;
+    padding: 20px 20px;
+}
+
+.table5 {
+    grid-area: t5;
+    background-color: #f5f5f5;
+    color: black;
+    padding: 20px 20px;
+}
+
+.table6 {
+    grid-area: t6;
+    background-color: #f5f5f5;
+    color: black;
+    padding: 20px 20px;
 }
 
 .topText {
     font-size: 30px;
     margin-left: 20px;
+}
+
+.headerLeft {
+    float: left;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.headerRight {
+    float: left;
+    font-size: 25px;
+    margin-left: calc(20px + 10%);
 }
 
 #features {
@@ -197,24 +291,14 @@ html {
     display: block;
     text-align: center;
     text-decoration: none;
-    width: 180px;
-    padding: 12px 20px;
+    width: 100%;
+    padding: 12px 0px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
     .detailsButton:hover {
         background-color: #ffee58;
     }
-
-.table2 {
-    grid-area: t2;
-    background-color: #f5f5f5;
-    color: black;
-    padding: 40px 20px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
 
 .title {
     position: absolute;
@@ -244,7 +328,7 @@ html {
     margin-left: 100px;
     display: grid;
     position: absolute;
-    grid-template-areas: 't1 t1 t1 t1 t1 t1' 't2 t2 t2 t2 t2 t2' 't3 t3 t3 t3 t3 t3' 'footer footer f2 f2 f3 f3';
+    grid-template-areas: 't1 t1 t1 t1 t1 t1' 't2 t2 t2 t2 t2 t2' 't3 t3 t3 t3 t3 t3' 't4 t4 t4 t4 t4 t4' 't5 t5 t5 t5 t5 t5' 't6 t6 t6 t6 t6 t6' 'footer footer f2 f2 f3 f3';
     background-color: #2196F3;
 }
 
@@ -376,18 +460,84 @@ html {
 
 
 @media only screen and (max-width: 800px) {
+    .table1 {
+        flex-direction: column;
+    }
+    
     .table2 {
         flex-direction: column;
     }
 
-    #buttonBox {
+    .table3 {
+        flex-direction: column;
+    }
+
+    .table4 {
+        flex-direction: column;
+    }
+
+    .table5 {
+        flex-direction: column;
+    }
+
+    .table6 {
+        flex-direction: column;
+    }
+
+    .rightSlideBox {
+        width: calc(100% - 40px);
+        -webkit-box-ordinal-group: 2;
+        -moz-box-ordinal-group: 2;
+        -ms-flex-order: 2;
+        -webkit-order: 2;
+        order: 2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .leftSlideBox {
+        width: calc(100% - 40px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .headerLeft {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .headerRight {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .Videos {
+        width: 100%;
+        margin: 0 0;
+    }
+
+    .Slides {
+        width: 100%;
+        margin: 0 0;
+    }
+
+    #VideoLeft {
+        width: 100%;
+        margin: 0 0;
+    }
+
+    .buttonBoxLeft {
+        margin: 0 0;
         width: 100%;
         vertical-align: top;
     }
 
-    #slides {
-        width: calc(100% - 40px);
+    .buttonBoxRight {
+        margin: 0 0;
+        width: 100%;
+        vertical-align: top;
     }
+
 
     .belowButton {
         width: auto;
@@ -395,7 +545,6 @@ html {
     }
 
     .detailsButton {
-        margin-right: 40px;
         width: auto;
         display: block;
     }
