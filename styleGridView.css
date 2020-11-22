@@ -1,7 +1,7 @@
 body {
     width: 100%;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 #itemHeader {
@@ -245,7 +245,8 @@ html {
 
 .footerRight {
     width: 33%;
-    float: left
+    float: left;
+    word-break: break-all;
 }
 
 .rightMenus {
