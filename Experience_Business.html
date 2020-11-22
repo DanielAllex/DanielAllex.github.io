@@ -49,8 +49,8 @@
     </div>
     <div id="completeContainer" class="grid-container">
         <div id="Container" class="table2">
-            <center id="about"><b class="topText">Business Pitch</b><br /><br />As a part of my school's selective Innovation and Entrepreneurship Club, two others and I worked on developing a plan and business pitch for an idea we had. Our idea was an app for smart watches meant for those with hearing loss that would display what is being said in the person's surroundings. Along with simply displaying the text, it would allow the user to create voice profiles for friends and family so that it is always clear who is saying what. Along with this, it would change the color of the text depending on the emotion at which things are said. Our final presentation was a business pitch to local business owners after months of revising our pitch and idea. Below is only my part, the idea and the UI and functions to the app.</center><br /><br /><iframe id="slides" src="https://www.youtube.com/embed/It3xH5Rlqv4"></iframe><div id="buttonBox"><br /><a class="detailsButton" onclick="" style="color: black;" href="pdfCollection/BusinessSlides.pdf"> Powerpoint </a><br /><a class="detailsButton" onclick="" style="color: black;" href="pdfCollection/BusinessWC.pdf"> Works Consulted </a></div>
-</div>
+            <center id="about"><b class="topText">Business Pitch</b><br /><br />As a part of my school's selective Innovation and Entrepreneurship Club, two others and I worked on developing a plan and business pitch for an idea we had. Our idea was an app for smart watches meant for those with hearing loss that would display what is being said in the person's surroundings. Along with simply displaying the text, it would allow the user to create voice profiles for friends and family so that it is always clear who is saying what. Along with this, it would change the color of the text depending on the emotion at which things are said. Our final presentation was a business pitch to local business owners after months of revising our pitch and idea. Below are the google slides that we presented with.</center><br /><br /><iframe id = "slides" src="https://docs.google.com/presentation/d/e/2PACX-1vS1QI2hI6atRKtNhV5dVVYkMqYozpAx_e5-5u7VF7uWZ-IdZXl5LTPVWMqdimaV3w8QUAuqS30d5dAq/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe><div id="buttonBox"><br /><a class="detailsButton" onclick="" style="color: black;" href="pdfCollection/BusinessSlides.pdf"> PDF </a><br /><a class="detailsButton" onclick="" style="color: black;" href="pdfCollection/BusinessWC.pdf"> Works Consulted </a></div>
+        </div>
 
         <div id="footer1" class="item5"><center><p class="contact">© 2023 by Daniel Allex</p></center></div>
         <div id="footer2" class="footer2"><center><p class="contact"><b><a href="index.html" class="footerText">Daniel Allex</a></b><br /><a class="footerText" href="about.html">About Me</a><br /><a class="footerText" href="Research_AV.html">Research</a><br /><a class="footerText" href="Experience_Extension.html">Experience</a><br /></p></center></div>
@@ -126,7 +126,7 @@
             document.getElementById("completeContainer").style.width = "100%";
                                 document.getElementById("completeContainer").style.marginLeft = "0px";
 
-                                document.getElementById("slides").style.height = document.getElementById("slides").offsetWidth * 0.5625;
+                                document.getElementById("slides").style.height = document.getElementById("slides").offsetWidth * 0.562972973 + 28;;
 
         }
             else {
@@ -150,7 +150,7 @@
             document.getElementById("sideNav").style.paddingRight = "10px";
             document.getElementById("completeContainer").style.marginLeft = "100px";
                 document.getElementById("completeContainer").style.width = "calc(100% - 100px)";
-                            document.getElementById("slides").style.height = document.getElementById("slides").offsetWidth * 0.5625;
+                            document.getElementById("slides").style.height = document.getElementById("slides").offsetWidth * 0.562972973 + 28;;
 
         }
     var slideHeight;
@@ -187,7 +187,7 @@
                 document.getElementById("completeContainer").style.marginLeft = "0px";
                 document.getElementById("completeContainer").style.width = "100%";
                 pastWidth = window.innerWidth;
-                document.getElementById("slides").style.height = document.getElementById("slides").offsetWidth * 0.5625;
+                document.getElementById("slides").style.height = document.getElementById("slides").offsetWidth * 0.562972973 + 28;;
             }
             document.getElementById("completeContainer").style.marginLeft = "0px";
             document.getElementById("completeContainer").style.width = "100%";
@@ -214,7 +214,7 @@
             document.getElementById("completeContainer").style.display = "grid";
             document.getElementById("completeContainer").style.marginLeft = "100px";
             document.getElementById("completeContainer").style.width = "calc(100% - 100px)";
-            document.getElementById("slides").style.height = document.getElementById("slides").offsetWidth * 0.5625;
+            document.getElementById("slides").style.height = document.getElementById("slides").offsetWidth * 0.562972973 + 28;;
         }
 
 
@@ -234,16 +234,13 @@
             html.clientHeight, html.scrollHeight, html.offsetHeight);
         if (height == window.innerHeight) {
             document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 140 - document.getElementById("footer1").offsetHeight) + "px";
-            console.log("a");
         }
         else {
             if (window.innerHeight > 294 + document.getElementById("about").offsetHeight + slideHeight) {
                 document.getElementById("Container").style.height = (window.innerHeight - 140 - document.getElementById("footer1").offsetHeight);
-                console.log("b");
             }
             else {
                 document.getElementById("Container").style.height = 50 + document.getElementById("about").offsetHeight + slideHeight;
-                console.log("c");
             }
         }
  if (document.getElementById("completeContainer").style.width == "100%")

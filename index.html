@@ -10,9 +10,8 @@
 </head>
 
 <body>
-    <a id="Home"></a>
     <div id="itemHeader">
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <a href="javascript:void(0);" class="icon" onclick="activateSideBar()">
             <i class="fa fa-bars"></i>
         </a>
         <a href="index.html" class="leftMenus">DANIEL ALLEX</a>
@@ -34,19 +33,22 @@
             <a href="Experience_Business.html" class="ExpBlock">&nbsp;Business<br />&nbsp;Pitch</a>
         <a class="MajorBlock" href="contact.html">&nbsp;Contact</a>
     </div>
-    <div id="completeContainer" class="grid-container">
+    <div id="completeContainer">
         <div id="item2">
             <div>
 
                 <img class="bigImg" src="Images/space.jpg"><div class="centered"><center>DANIEL ALLEX:<br>DIGITAL PORTFOLIO</center></div>
             </div>
         </div>
-        <div id="table1"><center class="about"><b class="topText"><br>This Website</b><br><br>This website was created with HTML, CSS, and JavaScript to showcase both my website development skills as well as my notable programming and research projects. This website was designed to work on both PC and mobile. Below is the github repository for this website, which has the files that make the content, styling, and responsiveness of this website.</center><br><center><a id="Aboutbutton" href="https://github.com/DanielAllex/DanielAllex.github.io" style="color: black;"> GitHub Repository </a></center><br></div>
-        <div id="table2"><center class="info"><b class="topText">Research</b><br><br>As part of the rigorous STEM Academy courseload, I have done numerous research projects and papers on various topics. Additionally, as part of the Sourcebook project in particular, I analyzed modern technology articles for biases and rhetorical devices that enhance even arguments that may not be obvious for what seems like a completely objective field.<br><br><br></center><div class="rightImg"><img class="topImg" src="Images/AV.PNG"><br><br><center><a id="AIbutton" href="Research_Presentations.html" style="color: black;"> See Research </a></center></div></div>
-        <div id="table3"><center class="info"><b class="topText">Experience</b><br><br>Having a great interest for technology, I have worked on various different programming projects with different languages involved. In addition to programming projects, I have also competed in competitive programming events and have even given a business pitch to local business owners for a plan to create an app.<br><br><br></center><div class="rightImg"><img class="topImg" src="Images/ACSL.png"><br><br><center><a id="Experiencebutton" href="Experience_Extension.html" style="color: black;"> See Experience </a></center></div></div>
-        <div class="item5"><center><p class="contact">© 2023 by Daniel Allex</p></center></div>
-        <div class="footer2"><center><p class="contact"><b><a href="index.html" class="footerText">Daniel Allex</a></b><br /><a class="footerText" href="Research_Presentations.html">Research</a><br /><a class="footerText" href="Experience_Extension.html">Experience</a><br /></p></center></div>
-        <div class="footer3"><center><p class="contact"><b>Contact Me</b><br />Email: <a class="footerText" href="mailto:DanielAllex4@gmail.com">DanielAllex4@gmail.com</a><br /></p></div>
+        <div id="Even"><center class="about"><b class="topText"><br>This Website</b><br><br>Created with HTML, CSS, and JavaScript, this website shows my ability to create and style responsive websites in displaying my other work.</center><br><center><a class="Button" href="https://github.com/DanielAllex/DanielAllex.github.io"> GitHub Repository </a></center><br></div>
+        <div id="Odd"><center class="info"><b class="topText">Research</b><br><br>As part of the rigorous STEM Academy courseload, I have done numerous research projects and papers on various topics. Additionally, as part of the Sourcebook project in particular, I analyzed modern technology articles for biases and rhetorical devices that enhance even arguments that may not be obvious for what seems like a completely objective field.<br><br><br></center><div class="rightImg"><img class="topImg" src="Images/Research.PNG"><br><br><center><a class="Button" href="Research_Presentations.html"> See Research </a></center></div></div>
+        <div id="EvenImg"><center class="info"><b class="topText">Experience</b><br><br>This is where I display some of the notable projects that I have worked on. Included are Fact Exact, game development experience, a particular programming puzzle that I found interesting, and the app structure that I pitched to local business owners as a part of the Innovation and Entrepreneurship Club.<br><br><br></center><div class="rightImg"><img class="topImg" src="Images/CAC.png"><br><br><center><a class="Button" href="Experience_Extension.html" > See Experience </a></center></div></div>
+        <div class="footer">
+            <div class="footerLeft"><center><p class="contact">© 2023 by Daniel Allex</p></center></div>
+            <div class="footerCenter"><center><p class="contact"><b><a href="index.html" class="footerText">Daniel Allex</a></b><br /><a class="footerText" href="Research_Presentations.html">Research</a><br /><a class="footerText" href="Experience_Extension.html">Experience</a><br /></p></center></div>
+            <div class="footerRight"><center><p class="contact"><b>Contact Me</b><br />Email: <a class="footerText" href="mailto:DanielAllex4@gmail.com">DanielAllex4@gmail.com</a><br /></p></div>
+
+        </div>
     </div>
 
 
@@ -72,7 +74,7 @@
         }
     }
 
-    function myFunction() {
+    function activateSideBar() {
         var x = document.getElementById("sideNav");
 
 

@@ -39,7 +39,7 @@ body {
     width: calc(100% - 40px);
 }
 
-#itemHeader {
+    #itemHeader {
     height: 80px;
     z-index: 100;
     width: 100%;
@@ -117,6 +117,46 @@ body {
         cursor: pointer;
     }
 
+.leftSlideBox {
+    width: 50%;
+    float: left;
+}
+
+.rightSlideBox {
+    width: 50%;
+    float: right;
+}
+
+.buttonBoxLeft {
+    clear: both;
+    vertical-align: top;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(90% - 40px);
+}
+
+.buttonBoxRight {
+    clear: both;
+    vertical-align: top;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(90% - 40px);
+}
+
+.headerRight {
+    font-size: 25px;
+    width: calc(90% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.headerLeft {
+    font-size: 25px;
+    width: calc(90% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .MajorBlock {
     display: none;
     background-color: #eeeeee;
@@ -135,6 +175,20 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+
+.belowButton {
+    display: block;
+    background-color: #bdbdbd;
+    text-align: center;
+    text-decoration: none;
+    width: 180px;
+    padding: 12px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+    .belowButton:hover {
+        background-color: #ffee58;
+    }
 
 .MajorBlock:hover {
     background-color: #b0bec5;
@@ -171,17 +225,17 @@ html {
 #features {
 }
 
-.belowButton {
+.detailsButton {
     display: block;
     background-color: #bdbdbd;
     text-align: center;
     text-decoration: none;
-    width: 180px;
+    width: 100%;
     padding: 12px 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-    .belowButton:hover {
+    .detailsButton:hover {
         background-color: #ffee58;
     }
 
@@ -193,7 +247,11 @@ html {
     background-color: #f5f5f5;
     color: black;
     padding: 40px 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
+
 
 .title {
     position: absolute;
@@ -354,6 +412,12 @@ html {
 
 @media only screen and (max-width: 800px) {
     .table2 {
+        flex-direction: column;
+    }
+
+    .detailsButton {
+        width: auto;
+        display: block;
     }
 
     .belowButton {
@@ -368,6 +432,45 @@ html {
 
     .icon {
         display: block;
+    }
+
+    .rightSlideBox {
+        width: calc(100% - 40px);
+        -webkit-box-ordinal-group: 2;
+        -moz-box-ordinal-group: 2;
+        -ms-flex-order: 2;
+        -webkit-order: 2;
+        order: 2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .leftSlideBox {
+        width: calc(100% - 40px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .headerLeft {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .headerRight {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttonBoxLeft {
+        margin: 0 0;
+        width: 100%;
+        vertical-align: top;
+    }
+
+    .buttonBoxRight {
+        margin: 0 0;
+        width: 100%;
+        vertical-align: top;
     }
 
     .grid-container {

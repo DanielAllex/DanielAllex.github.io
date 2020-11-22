@@ -52,27 +52,17 @@ body {
 }
 
 .Slides {
-    float: left;
-    margin-left: 20px;
-    margin-right: 20px;
     width: calc(90% - 40px);
-    max-width: 600px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .Videos {
-    float: left;
-    margin-right: 20px;
-    margin-left: calc(10% + 20px);
     width: calc(90% - 40px);
-    max-width: 600px;
-}
-
-#VideoLeft {
-    float: left;
-    margin-left: 20px;
-    margin-right: 20px;
-    width: calc(90% - 40px);
-    max-width: 600px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #smallcaret {
@@ -92,25 +82,14 @@ body {
     float: right;
 }
 
-.buttonBoxLeft {
-    float: left;
+.buttonBox {
     clear: both;
     vertical-align: top;
-    margin-left: 20px;
-    margin-right: 20px;
     width: calc(90% - 40px);
-    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.buttonBoxRight {
-    float: left;
-    clear: both;
-    vertical-align: top;
-    margin-left: calc(10% + 20px);
-    margin-right: 20px;
-    width: calc(90% - 40px);
-    max-width: 600px;
-}
 
 .block {
     display: block;
@@ -235,6 +214,9 @@ html {
     background-color: #f5f5f5;
     color: black;
     padding: 20px 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .table5 {
@@ -244,28 +226,18 @@ html {
     padding: 20px 20px;
 }
 
-.table6 {
-    grid-area: t6;
-    background-color: #f5f5f5;
-    color: black;
-    padding: 20px 20px;
-}
 
 .topText {
     font-size: 30px;
     margin-left: 20px;
 }
 
-.headerLeft {
-    float: left;
+.header {
+    display: block;
     font-size: 25px;
-    margin-left: 20px;
-}
-
-.headerRight {
-    float: left;
-    font-size: 25px;
-    margin-left: calc(20px + 10%);
+    width: calc(90% - 40px);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #features {
@@ -287,17 +259,27 @@ html {
 
 
 .detailsButton {
-    background-color: #bdbdbd;
-    display: block;
-    text-align: center;
+    background-color: #1e88e5;
     text-decoration: none;
-    width: 100%;
-    padding: 12px 0px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: normal;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 25px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
 }
 
     .detailsButton:hover {
-        background-color: #ffee58;
+        background-color: #1565c0;
     }
 
 .title {
@@ -328,7 +310,7 @@ html {
     margin-left: 100px;
     display: grid;
     position: absolute;
-    grid-template-areas: 't1 t1 t1 t1 t1 t1' 't2 t2 t2 t2 t2 t2' 't3 t3 t3 t3 t3 t3' 't4 t4 t4 t4 t4 t4' 't5 t5 t5 t5 t5 t5' 't6 t6 t6 t6 t6 t6' 'footer footer f2 f2 f3 f3';
+    grid-template-areas: 't1 t1 t1 t1 t1 t1' 't2 t2 t2 t2 t2 t2' 't3 t3 t3 t3 t3 t3' 't4 t4 t4 t4 t4 t4' 'footer footer f2 f2 f3 f3';
     background-color: #2196F3;
 }
 
@@ -476,14 +458,6 @@ html {
         flex-direction: column;
     }
 
-    .table5 {
-        flex-direction: column;
-    }
-
-    .table6 {
-        flex-direction: column;
-    }
-
     .rightSlideBox {
         width: calc(100% - 40px);
         -webkit-box-ordinal-group: 2;
@@ -501,12 +475,8 @@ html {
         margin-right: auto;
     }
 
-    .headerLeft {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .headerRight {
+    .header {
+        float: left;
         margin-left: auto;
         margin-right: auto;
     }
@@ -521,18 +491,8 @@ html {
         margin: 0 0;
     }
 
-    #VideoLeft {
-        width: 100%;
-        margin: 0 0;
-    }
 
-    .buttonBoxLeft {
-        margin: 0 0;
-        width: 100%;
-        vertical-align: top;
-    }
-
-    .buttonBoxRight {
+    .buttonBox {
         margin: 0 0;
         width: 100%;
         vertical-align: top;
