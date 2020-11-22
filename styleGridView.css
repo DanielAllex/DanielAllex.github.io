@@ -230,7 +230,7 @@ html {
 .footer {
     background-color: #036;
     width: 100%;
-    display: inline-block
+    display: inline-block;
 }
 
 .footerLeft {
@@ -246,7 +246,6 @@ html {
 .footerRight {
     width: 33%;
     float: left;
-    word-break: break-all;
 }
 
 .rightMenus {
@@ -390,7 +389,8 @@ html {
 
     .footerRight {
         width: 40%;
-        float: left
+        float: left;
+        overflow-x: hidden;
     }
 
     .rightImg {
