@@ -16,22 +16,20 @@
         </a>
         <a href="index.html" class="leftMenus">DANIEL ALLEX</a>
         <p class="rightMenus">
+            <a class="rightURL" href="Experience_Extension.html">Projects</a>
             <a class="rightURL" href="Research_Presentations.html">Research</a>
-            <a class="rightURL" href="Experience_Extension.html">Experience</a>
-            <a class="rightURL" href="contact.html">Contact</a>
         </p>
     </div>
     <div id="sideNav">
+        <a class="MajorBlock" onclick="ExperienceTabs()" href="javascript:void(0);">&nbsp;Experience <span id="smallcaretExp">&#9660;</span></a>
+        <a href="Experience_Extension.html" class="ExpBlock">&nbsp;STEM<br />&nbsp;Capstone</a>
+        <a href="Experience_GameDev.html" class="ExpBlock">&nbsp;Game<br />&nbsp;Development</a>
+        <a href="Experience_Business.html" class="ExpBlock">&nbsp;Business<br />&nbsp;Pitch</a>
         <a class="MajorBlock" onclick="ResearchTabs()" href="javascript:void(0);">&nbsp;Research <span id="smallcaret">&#9660;</span></a>
         <a class="block" href="Research_Presentations.html">&nbsp;Research<br />&nbsp;Presentations</a>
         <a href="Research_Papers.html" class="block">&nbsp;Research<br />&nbsp;Papers</a>
         <a class="block" href="Research_SB.html">&nbsp;Sourcebook</a>
-        <a class="MajorBlock" onclick="ExperienceTabs()" href="javascript:void(0);">&nbsp;Experience <span id="smallcaretExp">&#9660;</span></a>
-            <a href="Experience_Extension.html" class="ExpBlock">&nbsp;Markup<br />&nbsp;Extension</a>
-            <a href="Experience_GameDev.html" class="ExpBlock">&nbsp;Game<br />&nbsp;Development</a>
-            <a href="Experience_Comp.html" class="ExpBlock">&nbsp;Competitive<br />&nbsp;Programming</a>
-            <a href="Experience_Business.html" class="ExpBlock">&nbsp;Business<br />&nbsp;Pitch</a>
-        <a class="MajorBlock" href="contact.html">&nbsp;Contact</a>
+
     </div>
     <div id="completeContainer">
         <div id="item2">
@@ -40,12 +38,12 @@
                 <img class="bigImg" src="Images/space.jpg"><div class="centered"><center>DANIEL ALLEX:<br>DIGITAL PORTFOLIO</center></div>
             </div>
         </div>
-        <div id="Even"><center class="about"><b class="topText"><br>This Website</b><br><br>Created with HTML, CSS, and JavaScript, this website shows my ability to create and style responsive websites in displaying my other work.</center><br><center><a class="Button" href="https://github.com/DanielAllex/DanielAllex.github.io"> GitHub Repository </a></center><br></div>
-        <div id="Odd"><center class="info"><b class="topText">Research</b><br><br>As part of the rigorous STEM Academy courseload, I have done numerous research projects and papers on various topics. Additionally, as part of the Sourcebook project in particular, I analyzed modern technology articles for biases and rhetorical devices that enhance even arguments that may not be obvious for what seems like a completely objective field.<br><br><br></center><div class="rightImg"><img class="topImg" src="Images/Research.PNG"><br><br><center><a class="Button" href="Research_Presentations.html"> See Research </a></center></div></div>
-        <div id="EvenImg"><center class="info"><b class="topText">Experience</b><br><br>This is where I display some of the notable projects that I have worked on. Included are Fact Exact, game development experience, a particular programming puzzle that I found interesting, and the app structure that I pitched to local business owners as a part of the Innovation and Entrepreneurship Club.<br><br><br></center><div class="rightImg"><img class="topImg" src="Images/CAC.PNG"><br><br><center><a class="Button" href="Experience_Extension.html" > See Experience </a></center></div></div>
-        <div class="footer">
+        <div id="Even"><center class="about"><b class="topText"><br>This Website</b><br><br>Created with HTML, CSS, and JavaScript, this website shows my ability to create and style responsive websites in displaying my work.</center><br><center><a class="Button" href="https://github.com/DanielAllex/DanielAllex.github.io"> GitHub Repository </a></center><br></div>
+        <div id="Odd"><center class="info"><b class="topText">Projects</b><br><br>Here is where I display a few of my most notable projects that I worked on pertaining to computer science and technology.<br><br><br></center><div class="rightImg"><img class="topImg" src="Images/CAC.PNG"><br><br><center><a class="Button" href="Experience_Extension.html"> See Projects </a></center></div></div>
+        <div id="EvenImg"><center class="info"><b class="topText">Research</b><br><br>As part of the rigorous STEM Academy, I have done research on several topics in my STEM field of interest and have delivered presentations on these topics as well.<br><br><br></center><div class="rightImg"><img class="topImg" src="Images/Research.PNG"><br><br><center><a class="Button" href="Research_Presentations.html"> See Research </a></center></div></div>
+        <div id="footer">
             <div class="footerLeft"><center><p class="contact">© 2023 by Daniel Allex</p></center></div>
-            <div class="footerCenter"><center><p class="contact"><b><a href="index.html" class="footerText">Daniel Allex</a></b><br /><a class="footerText" href="Research_Presentations.html">Research</a><br /><a class="footerText" href="Experience_Extension.html">Experience</a><br /></p></center></div>
+            <div class="footerCenter"><center><p class="contact"><b><a href="index.html" class="footerText">Daniel Allex</a></b><br /><a class="footerText" href="Experience_Extension.html">Projects</a><br /><a class="footerText" href="Research_Presentations.html">Research</a><br /></p></center></div>
             <div class="footerRight"><center><p class="contact"><b>Contact Me</b><br />Email: <a class="footerText" href="mailto:DanielAllex4@gmail.com">DanielAllex4@gmail.com</a><br /></p></div>
 
         </div>
@@ -114,7 +112,7 @@
      if (document.getElementById("completeContainer").style.width == "100%")
             document.getElementById("completeContainer").style.width = document.getElementById("itemHeader").offsetWidth;
 
-    if (window.innerWidth < 800) {
+    if (window.innerWidth <= 800) {
         document.getElementById("sideNav").style.paddingRight = "10px";
         document.getElementById("sideNav").style.display = "none";
         document.getElementById("completeContainer").style.display = "grid";
@@ -125,13 +123,13 @@
         var y = document.getElementsByClassName("block");
         var i;
         for (i = 0; i < y.length; i++) {
-            y[i].style.display = "block";
+            y[i].style.display = "none";
         }
 
         var z = document.getElementsByClassName("ExpBlock");
                 var i;
                 for (i = 0; i < z.length; i++) {
-                    z[i].style.display = "none";
+                    z[i].style.display = "block";
         }
         document.getElementById("smallcaretExp").innerHTML = "&#9660;";
         document.getElementById("sideNav").style.display = "none";
@@ -144,7 +142,7 @@
 
     var pastWidth;
     window.onresize = function () {
-        if (window.innerWidth < 800) {
+        if (window.innerWidth <= 800) {
 
             if (document.getElementById("sideNav").style.width != "100%") {
                 document.getElementById("sideNav").style.paddingRight = "10px";

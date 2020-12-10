@@ -44,6 +44,11 @@ body {
     font-size: 12px
 }
 
+.about{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 .block {
     display: none;
     background-color: #bdbdbd;
@@ -163,6 +168,8 @@ html {
 
 .info {
     width: calc(100% - 380px - 12vw);
+    margin-left: 5%;
+    margin-right: 5%;
     float: left
 }
 
@@ -227,7 +234,7 @@ html {
     max-width: 100%
 }
 
-.footer {
+#footer {
     background-color: #036;
     width: 100%;
     display: inline-block;
@@ -369,6 +376,11 @@ html {
         flex-direction: column
     }
 
+    .about{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     #EvenImg {
         flex-direction: column
     }
@@ -412,7 +424,9 @@ html {
         -ms-flex-order: 1;
         -webkit-order: 1;
         order: 1;
-        vertical-align: top
+        vertical-align: top;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #sideNav {

@@ -2,40 +2,41 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Business Pitch</title>
-    <link rel="stylesheet" type="text/css" href="Experience_iframe.css">
+    <title>Game Development</title>
+    <link rel="stylesheet" type="text/css" href="Experience_GameDev.css">
     <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
-<div id="itemHeader">
-    <a href="javascript:void(0);" class="icon" onclick="activateSideBar()">
-        <i class="fa fa-bars"></i>
-    </a>
-    <a href="index.html" class="leftMenus">DANIEL ALLEX</a>
-    <p class="rightMenus">
-        <a class="rightURL" href="Experience_Extension.html">Projects</a>
-        <a class="rightURL" href="Research_Presentations.html">Research</a>
-    </p>
-</div>
-<div id="sideNav">
-    <a class="MajorBlock" onclick="ExpTabs()" href="javascript:void(0);">&nbsp;Experience <span id="smallcaretExp">&#9650;</span></a>
+    <div id="itemHeader">
+        <a href="javascript:void(0);" class="icon" onclick="activateSideBar()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="index.html" class="leftMenus">DANIEL ALLEX</a>
+        <p class="rightMenus">
+            <a class="rightURL" href="Experience_Extension.html">Projects</a>
+            <a class="rightURL" href="Research_Presentations.html">Research</a>
+        </p>
+    </div>
+    <div id="sideNav">
+        <a class="MajorBlock" onclick="ExpTabs()" href="javascript:void(0);">&nbsp;Experience <span id="smallcaretExp">&#9650;</span></a>
 
-    <a href="Experience_Extension.html" class="ExpBlock">&nbsp;STEM<br />&nbsp;Capstone</a>
-    <a href="Experience_GameDev.html" class="ExpBlock">&nbsp;Game<br />&nbsp;Development</a>
-    <a href="Experience_Business.html" id="selectedBlock">&nbsp;Business<br />&nbsp;Pitch</a>
+        <a href="Experience_Extension.html" class="ExpBlock">&nbsp;STEM<br />&nbsp;Capstone</a>
+        <a href="Experience_GameDev.html" id="selectedBlock">&nbsp;Game<br />&nbsp;Development</a>
+        <a href="Experience_Business.html" class="ExpBlock">&nbsp;Business<br />&nbsp;Pitch</a>
 
-    <a class="MajorBlock" onclick="ResearchTabs()" href="javascript:void(0);">&nbsp;Research <span id="smallcaret">&#9660;</span></a>
-    <a class="block" href="Research_Presentations.html">&nbsp;Research<br />&nbsp;Presentations</a>
-    <a href="Research_Papers.html" class="block">&nbsp;Research<br />&nbsp;Papers</a>
-    <a class="block" href="Research_SB.html">&nbsp;Sourcebook</a>
+        <a class="MajorBlock" onclick="ResearchTabs()" href="javascript:void(0);">&nbsp;Research <span id="smallcaret">&#9660;</span></a>
+        <a class="block" href="Research_Presentations.html">&nbsp;Research<br />&nbsp;Presentations</a>
+        <a href="Research_Papers.html" class="block">&nbsp;Research<br />&nbsp;Papers</a>
+        <a class="block" href="Research_SB.html">&nbsp;Sourcebook</a>
 
-</div>
+    </div>
     <div id="completeContainer">
-        <div id="Container">
-            <center id="about"><b class="topText">Business Pitch</b><br /><br />As a part of my school’s selective Innovation and Entrepreneurship Club, I developed a structure for an app and a business plan under Dr. Richard Ash, a business professor at William and Mary. After constant critique on the app structure and business plan along with relevant lectures, my group and I formally pitched our app to local business owners.</center><br /><br /><iframe id = "slides" src="https://docs.google.com/presentation/d/e/2PACX-1vS1QI2hI6atRKtNhV5dVVYkMqYozpAx_e5-5u7VF7uWZ-IdZXl5LTPVWMqdimaV3w8QUAuqS30d5dAq/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe><div id="buttonBox"><br /><a class="detailsButton" onclick="" href="pdfCollection/BusinessSlides.pdf"> PDF </a><br /><a class="detailsButton" onclick="" href="pdfCollection/BusinessWC.pdf"> Works Consulted </a></div>
+        <div class="informationBox">
+            <center class="about"><br /><b class="topText">Game Development</b><br /><br />Under Construction!</center>
         </div>
+
 
         <div id="footer">
             <div class="footerLeft"><center><p class="contact">© 2023 by Daniel Allex</p></center></div>
@@ -106,6 +107,22 @@
         }
     }
 
+    function adjustSlides() {
+        var slides = document.getElementById("slides");
+        var videos = document.getElementsByClassName("Videos");
+
+        slides.style.height = slides.offsetWidth * 0.562972973 + 28;
+        var old = slides.style.height
+        slides.style.height = slides.offsetWidth * 0.562972973 + 28;
+        var delta = slides.style.height - old;
+        document.getElementById("buttonBox").style.marginTop = document.getElementById("buttonBox").style.marginTop + delta;
+
+        for (var i = 0; i < videos.length; i++)
+        {
+            videos[i].style.height = videos[i].offsetWidth * 0.5625;
+        }
+    }
+
 
     if (window.innerWidth <= 800) {
             document.getElementById("sideNav").style.paddingRight = "10px";
@@ -114,7 +131,7 @@
             document.getElementById("completeContainer").style.width = "100%";
                                 document.getElementById("completeContainer").style.marginLeft = "0px";
 
-                                document.getElementById("slides").style.height = document.getElementById("slides").offsetWidth * 0.562972973 + 28;;
+        adjustSlides();
 
         }
             else {
@@ -130,37 +147,17 @@
                 for (i = 0; i < z.length; i++) {
                     z[i].style.display = "none";
         }
-                        document.getElementById("smallcaret").innerHTML = "&#9660;";
-        document.getElementById("selectedBlock").style.display = "block";
+            document.getElementById("smallcaret").innerHTML = "&#9660;";
+            document.getElementById("selectedBlock").style.display = "block";
             document.getElementById("sideNav").style.display = "block";
             document.getElementById("completeContainer").style.display = "grid";
             document.getElementById("sideNav").style.width = "100px";
             document.getElementById("sideNav").style.paddingRight = "10px";
             document.getElementById("completeContainer").style.marginLeft = "100px";
-                document.getElementById("completeContainer").style.width = "calc(100% - 100px)";
-                            document.getElementById("slides").style.height = document.getElementById("slides").offsetWidth * 0.562972973 + 28;;
+            document.getElementById("completeContainer").style.width = "calc(100% - 100px)";
+            adjustSlides();
 
-        }
-    var slideHeight;
-    if (window.innerWidth <= 800)
-        slideHeight = document.getElementById("slides").offsetHeight + document.getElementById("buttonBox").offsetHeight;
-    else
-        slideHeight = Math.max(document.getElementById("slides").offsetHeight, document.getElementById("buttonBox").offsetHeight);
 
-    var body = document.body,
-    html = document.documentElement;
-    var height = Math.max( body.scrollHeight, body.offsetHeight, 
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
-        if (height == window.innerHeight) {
-            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 140 - document.getElementById("footer").offsetHeight) + "px";
-        }
-        else {
-            if (window.innerHeight > 294 + document.getElementById("about").offsetHeight + slideHeight) {
-                document.getElementById("Container").style.height = (window.innerHeight - 140 - document.getElementById("footer").offsetHeight);
-            }
-            else {
-                document.getElementById("Container").style.height = (height - 140 - document.getElementById("footer").offsetHeight);
-            }
     }
 
  if (document.getElementById("completeContainer").style.width == "100%")
@@ -175,7 +172,7 @@
                 document.getElementById("completeContainer").style.marginLeft = "0px";
                 document.getElementById("completeContainer").style.width = "100%";
                 pastWidth = window.innerWidth;
-                document.getElementById("slides").style.height = document.getElementById("slides").offsetWidth * 0.562972973 + 28;;
+                adjustSlides();
             }
             document.getElementById("completeContainer").style.marginLeft = "0px";
             document.getElementById("completeContainer").style.width = "100%";
@@ -202,36 +199,12 @@
             document.getElementById("completeContainer").style.display = "grid";
             document.getElementById("completeContainer").style.marginLeft = "100px";
             document.getElementById("completeContainer").style.width = "calc(100% - 100px)";
-            document.getElementById("slides").style.height = document.getElementById("slides").offsetWidth * 0.562972973 + 28;;
+            adjustSlides();
+
         }
 
-
-        var slideHeight;
-    if (window.innerWidth <= 800)
-        slideHeight = document.getElementById("slides").offsetHeight + document.getElementById("buttonBox").offsetHeight;
-    else
-            slideHeight = Math.max(document.getElementById("slides").offsetHeight, document.getElementById("buttonBox").offsetHeight);
-
-
-        document.getElementById("Container").style.minHeight = document.getElementById("about").offsetHeight + slideHeight + 20;
-
-
-        var body = document.body,
-            html = document.documentElement;
-        var height = Math.max(body.scrollHeight, body.offsetHeight,
-            html.clientHeight, html.scrollHeight, html.offsetHeight);
-        if (height == window.innerHeight) {
-            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 140 - document.getElementById("footer").offsetHeight) + "px";
-        }
-        else {
-            if (window.innerHeight > 294 + document.getElementById("about").offsetHeight + slideHeight) {
-                document.getElementById("Container").style.height = (window.innerHeight - 140 - document.getElementById("footer").offsetHeight);
-            }
-            else {
-                document.getElementById("Container").style.height = 50 + document.getElementById("about").offsetHeight + slideHeight;
-            }
-        }
  if (document.getElementById("completeContainer").style.width == "100%")
             document.getElementById("completeContainer").style.width = document.getElementById("itemHeader").offsetWidth;
     }
+
 </script>

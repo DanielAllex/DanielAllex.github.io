@@ -1,12 +1,27 @@
 body {
     width: 100%;
-    display: grid;
     margin: 0;
     padding: 0;
 }
 
 #Container {
+    background-color: #f5f5f5;
+    color: black;
+    padding: 40px 20px;
 }
+
+.info {
+    width: calc(100% - 380px - 12vw);
+    margin-left: 5%;
+    margin-right: 5%;
+    float: left
+}
+
+.topText {
+    font-size: 30px;
+    margin-left: 20px;
+}
+
 
 #footer1 {
 }
@@ -20,6 +35,10 @@ body {
 
 
 #completeContainer {
+    font-family: Arial;
+    font-size: calc(20px + .25vw);
+    width: 100%;
+    margin-top: 60px
 }
 
 .icon {
@@ -63,7 +82,7 @@ body {
     position: fixed;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 99;
-    margin-top: 80px;
+    margin-top: 20px;
 }
 
 #slides {
@@ -187,63 +206,71 @@ html {
 #features {
 }
 
+#Odd {
+    background-color: #f5f5f5;
+    color: #000;
+    padding: 80px 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%
+}
+
+.InformationBox {
+    background-color: #f5f5f5;
+    color: black;
+    padding: 20px 20px;
+}
+
 .detailsButton {
-    background-color: #bdbdbd;
-    display: block;
-    text-align: center;
+    background-color: #1e88e5;
     text-decoration: none;
-    width: 190px;
-    padding: 12px 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: normal;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 25px;
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
 }
 
     .detailsButton:hover {
-        background-color: #ffee58;
+        background-color: #1565c0;
     }
-
-.table2 {
-    grid-area: t2;
-    background-color: #f5f5f5;
-    color: black;
-    padding: 40px 20px;
-
-}
 
 .title {
     position: absolute;
 }
 
 
-.item5 {
-    grid-area: footer;
-    background-color: rgb(0, 51, 102);
+#footer {
+    background-color: #036;
+    width: 100%;
+    display: inline-block;
 }
 
-.footer2 {
-    grid-area: f2;
-    background-color: rgb(0, 51, 102);
+.footerLeft {
+    width: 33%;
+    float: left
 }
 
-.footer3 {
-    grid-area: f3;
-    background-color: rgb(0, 51, 102);
+.footerCenter {
+    width: 33%;
+    float: left
 }
 
-.grid-container {
-    margin-top: 60px;
-    width: calc(100% - 100px);
-    margin-left: 100px;
-    display: grid;
-    position: absolute;
-    grid-template-areas: 't1 t1 t1 t1 t1 t1' 't2 t2 t2 t2 t2 t2' 't3 t3 t3 t3 t3 t3' 'footer footer f2 f2 f3 f3';
-    background-color: #2196F3;
-    max-width: 100%;
+.footerRight {
+    width: 33%;
+    float: left;
 }
-
-    .grid-container > div {
-        font-family: Arial;
-        font-size: calc(20px + 0.25vw);
-    }
 
 .leftMenus {
     color: White;
@@ -368,6 +395,24 @@ html {
 
 
 @media only screen and (max-width: 800px) {
+
+    .footerLeft {
+        width: 30%;
+        float: left
+    }
+
+    .footerCenter {
+        width: 30%;
+        float: left
+    }
+
+    .footerRight {
+        width: 40%;
+        float: left;
+        overflow-x: hidden;
+    }
+
+    
     .table2 {
     }
 
@@ -389,6 +434,7 @@ html {
     #sideNav {
         display: none;
         position: absolute;
+        margin-top: 80px;
     }
 
     .icon {

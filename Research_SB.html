@@ -9,37 +9,36 @@
 
 </head>
 <body>
-    <a id="Home"></a>
     <div id="itemHeader">
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <a href="javascript:void(0);" class="icon" onclick="activateSideBar()">
             <i class="fa fa-bars"></i>
         </a>
         <a href="index.html" class="leftMenus">DANIEL ALLEX</a>
         <p class="rightMenus">
-            <a class="rightURL" href="Research_AV.html">Research</a>
-            <a class="rightURL" href="Experience_Extension.html">Experience</a>
-            <a class="rightURL" href="contact.html">Contact</a>
+            <a class="rightURL" href="Experience_Extension.html">Projects</a>
+            <a class="rightURL" href="Research_Presentations.html">Research</a>
         </p>
     </div>
     <div id="sideNav">
+        <a class="MajorBlock" onclick="ExperienceTabs()" href="javascript:void(0);">&nbsp;Experience <span id="smallcaretExp">&#9660;</span></a>
+        <a href="Experience_Extension.html" class="ExpBlock">&nbsp;STEM<br />&nbsp;Capstone</a>
+        <a href="Experience_GameDev.html" class="ExpBlock">&nbsp;Game<br />&nbsp;Development</a>
+        <a href="Experience_Business.html" class="ExpBlock">&nbsp;Business<br />&nbsp;Pitch</a>
         <a class="MajorBlock" onclick="ResearchTabs()" href="javascript:void(0);">&nbsp;Research <span id="smallcaret">&#9660;</span></a>
         <a class="block" href="Research_Presentations.html">&nbsp;Research<br />&nbsp;Presentations</a>
         <a href="Research_Papers.html" class="block">&nbsp;Research<br />&nbsp;Papers</a>
         <a id="selectedBlock" href="Research_SB.html">&nbsp;Sourcebook</a>
-        <a class="MajorBlock" onclick="ExperienceTabs()" href="javascript:void(0);">&nbsp;Experience <span id="smallcaretExp">&#9660;</span></a>
-        <a href="Experience_Extension.html" class="ExpBlock">&nbsp;Markup<br />&nbsp;Extension</a>
-        <a href="Experience_GameDev.html" class="ExpBlock">&nbsp;Game<br />&nbsp;Development</a>
-        <a href="Experience_Comp.html" class="ExpBlock">&nbsp;Competitive<br />&nbsp;Programming</a>
-        <a href="Experience_Business.html" class="ExpBlock">&nbsp;Business<br />&nbsp;Pitch</a>
-        <a class="MajorBlock" href="contact.html">&nbsp;Contact</a>
     </div>
-    <div id="completeContainer" class="grid-container">
-        <div id="Container" class="table2"><center id="about"><b class="topText">AP Sourcebook</b><br /><br />Through this project, I found 7 technology-related articles, most of which were researched as a previous research presentation, and looked for argument and rhetorical appeals. Through digitally annotating and then writing about each article, I was able to learn that even technology writers, who are thought to be all factual, apply strategies to better convey their arguments and usually hold some sort of argument even when first appearing informative rather than argumentative.<br /><br /><br /><a class="belowButton" onclick="" style="color: black;" href="pdfCollection/SBResearch.pdf">PDF</a><br /><a class="belowButton" onclick="" style="color: black;" href="pdfCollection/SBWC.pdf">Works Cited</a></center>
+    <div id="completeContainer">
+        <div id="Container" class="table2"><center id="about"><b class="topText">AP Sourcebook</b><br /><br />This document includes 7 technology-related articles that are annotated for devices and then analyzed. I learned that even objective technology writers usually have at least minor arguments based on how they present information or subtly include phrases.<br /><br /><br /><a class="belowButton" onclick="" href="pdfCollection/SBResearch.pdf">PDF</a><br /><a class="belowButton" onclick="" href="pdfCollection/SBWC.pdf">Works Cited</a></center>
         </div>
 
-        <div id="footer1" class="item5"><center><p class="contact">© 2023 by Daniel Allex</p></center></div>
-        <div id="footer2" class="footer2"><center><p class="contact"><b><a href="index.html" class="footerText">Daniel Allex</a></b><br /><a class="footerText" href="Research_Presentations.html">Research</a><br /><a class="footerText" href="Experience_Extension.html">Experience</a><br /></p></center></div>
-        <div id="footer3" class="footer3"><center><p class="contact"><b>Contact Me</b><br />Email: <a class="footerText" href="mailto:DanielAllex4@gmail.com">DanielAllex4@gmail.com</a><br /></p></div>
+        <div id="footer">
+            <div class="footerLeft"><center><p class="contact">© 2023 by Daniel Allex</p></center></div>
+            <div class="footerCenter"><center><p class="contact"><b><a href="index.html" class="footerText">Daniel Allex</a></b><br /><a class="footerText" href="Experience_Extension.html">Projects</a><br /><a class="footerText" href="Research_Presentations.html">Research</a><br /></p></center></div>
+            <div class="footerRight"><center><p class="contact"><b>Contact Me</b><br />Email: <a class="footerText" href="mailto:DanielAllex4@gmail.com">DanielAllex4@gmail.com</a><br /></p></div>
+
+        </div>
     </div>
 
 
@@ -66,7 +65,7 @@
         }
     }
 
-    function myFunction() {
+    function activateSideBar() {
         var x = document.getElementById("sideNav");
 
 
@@ -94,19 +93,17 @@
         for (i = 0; i < x.length; i++) {
             if (x[i].style.display == "block") {
                 x[i].style.display = "none";
-                document.getElementById("selectedBlock").style.display = "none";
                 document.getElementById("smallcaretExp").innerHTML = "&#9660;";
             }
             else {
                 x[i].style.display = "block";
-                document.getElementById("selectedBlock").style.display = "block";
                 document.getElementById("smallcaretExp").innerHTML = "&#9650;";
             }
         }
     }
 
     
-            if (window.innerWidth < 800) {
+            if (window.innerWidth <= 800) {
             document.getElementById("sideNav").style.display = "none";
             document.getElementById("completeContainer").style.display = "grid";
             document.getElementById("completeContainer").style.marginLeft = "0px";
@@ -141,20 +138,20 @@
     var height = Math.max( body.scrollHeight, body.offsetHeight, 
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
         if (height == window.innerHeight) {
-            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 140 - document.getElementById("footer1").offsetHeight) + "px";
+            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 140 - document.getElementById("footer").offsetHeight) + "px";
         }
         else {
             if (window.innerHeight > 294 + document.getElementById("about").offsetHeight) {
-                document.getElementById("Container").style.height = (window.innerHeight - 140 - document.getElementById("footer1").offsetHeight);
+                document.getElementById("Container").style.height = (window.innerHeight - 140 - document.getElementById("footer").offsetHeight);
             }
             else {
-                document.getElementById("Container").style.height = (height - document.getElementById("Container").offsetHeight - 140 - document.getElementById("footer1").offsetHeight);
+                document.getElementById("Container").style.height = (height - document.getElementById("Container").offsetHeight - 140 - document.getElementById("footer").offsetHeight);
             }
     }
 
     var pastWidth;
     window.onresize = function () {
-        if (window.innerWidth < 800) {
+        if (window.innerWidth <= 800) {
             if (document.getElementById("sideNav").style.width != "100%") {
                 document.getElementById("sideNav").style.display = "none";
                 document.getElementById("sideNav").style.paddingRight = "10px";
@@ -196,14 +193,14 @@
         var height = Math.max(body.scrollHeight, body.offsetHeight,
             html.clientHeight, html.scrollHeight, html.offsetHeight);
         if (height == window.innerHeight) {
-            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 140 - document.getElementById("footer1").offsetHeight) + "px";
+            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 140 - document.getElementById("footer").offsetHeight) + "px";
         }
         else {
             if (window.innerHeight > 294 + document.getElementById("about").offsetHeight) {
-                document.getElementById("Container").style.height = (window.innerHeight - 140 - document.getElementById("footer1").offsetHeight);
+                document.getElementById("Container").style.height = (window.innerHeight - 140 - document.getElementById("footer").offsetHeight);
             }
             else {
-                document.getElementById("Container").style.height = (height - document.getElementById("Container").offsetHeight - 140 - document.getElementById("footer1").offsetHeight);
+                document.getElementById("Container").style.height = (height - document.getElementById("Container").offsetHeight - 140 - document.getElementById("footer").offsetHeight);
             }
         }
 
