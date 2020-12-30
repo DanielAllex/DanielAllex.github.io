@@ -124,7 +124,7 @@ body {
     margin-top: 20px;
 }
 
-#slides {
+#image {
     width: calc(90% - 40px);
     display: block;
     margin-right: auto;
@@ -465,7 +465,7 @@ html {
     }
 
     .leftSlideBox {
-        width: calc(100% - 40px);
+        width: calc(100% - 20px);
         margin-left: auto;
         margin-right: auto;
     }
@@ -484,6 +484,12 @@ html {
     #slides {
         width: 100%;
         margin: 0 0;
+    }
+
+    #image {
+        width: calc(100% - 20px);
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .table2 {
