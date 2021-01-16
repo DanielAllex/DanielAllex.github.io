@@ -25,18 +25,12 @@
         <a href="Experience_Business.html" class="ExpBlock">&nbsp;Business<br />&nbsp;Pitch</a>
         <a class="MajorBlock" onclick="ResearchTabs()" href="javascript:void(0);">&nbsp;Research <span id="smallcaret">&#9660;</span></a>
         <a class="block" href="Research_Presentations.html">&nbsp;Research<br />&nbsp;Presentations</a>
-        <a href="Research_Papers.html" id="selectedBlock">&nbsp;Research<br />&nbsp;Papers</a>
+        <a href="Research_Papers.html" id="selectedBlock">&nbsp;Research<br />&nbsp;Paper</a>
         <a class="block" href="Research_SB.html">&nbsp;Sourcebook</a>
     </div>
     <div id="completeContainer">
-        <div id="Container">
-            <div id="leftSlideBox">
-                <p class="headerLeft"><b class="boldSize">Autonomous Vehicles: A Technology with Many Problems and Few Solutions</b><br /><br />This APA research paper explores the problems with autonomous vehicles as well as the possible temporary solutions despite these flaws. With this being a longer paper, the goal was to not lose focus of the argument while discussing the details.</p><div class="buttonBoxLeft"><a class="detailsButton" onclick="" href="pdfCollection/AVResearchPaper.pdf"> PDF </a> <br /> <a class="detailsButton" onclick="" href="pdfCollection/AVResearchPaperWC.pdf">References</a></div>
-            </div>
-            <br /><div id="rightSlideBox">
-
-                      <p class="headerRight"><b class="boldSize">Software Engineering: A Career Refining the Future</b><br /><br />This MLA research paper explores software engineering as a career. Specifically, it discusses the career’s positive effects on society, benefits, and flexibility that gives it career opportunities in almost every field.</p><div class="buttonBoxRight"><a class="detailsButton" onclick="" href="pdfCollection/SEResearchPaper.pdf"> PDF </a> <br /> <a class="detailsButton" onclick="" href="pdfCollection/SEWC.pdf">Works Cited</a></div>
-    </div>
+        <div id="Container" class="table2">
+            <center id="about"><b class="topText">Autonomous Vehicles: A Technology with Many Problems and Few Solutions</b><br /><br />This APA research paper explores the problems with autonomous vehicles as well as the possible temporary solutions despite these flaws. With this being a longer paper, the goal was to not lose focus of the argument while discussing the details.<br /><br /><br /><a class="belowButton" onclick="" href="pdfCollection/AVResearchPaper.pdf">PDF</a><br /><a class="belowButton" onclick="" href="pdfCollection/AVResearchPaperWC.pdf">References</a></center>
         </div>
 
         <div id="footer">
@@ -108,71 +102,55 @@
         }
     }
 
-    
-            if (window.innerWidth <= 800) {
-            document.getElementById("sideNav").style.display = "none";
-            document.getElementById("completeContainer").style.display = "grid";
-            document.getElementById("completeContainer").style.marginLeft = "0px";
-            document.getElementById("completeContainer").style.width = "100%";
-            document.getElementById("sideNav").style.paddingRight = "10px";
-        }
-            else {
-                var y = document.getElementsByClassName("block");
-                var i;
-                for (i = 0; i < y.length; i++) {
-                    y[i].style.display = "block";
-                }
 
-                var z = document.getElementsByClassName("ExpBlock");
-                var i;
-                for (i = 0; i < z.length; i++) {
-                    z[i].style.display = "none";
+    if (window.innerWidth <= 800) {
+        document.getElementById("sideNav").style.display = "none";
+        document.getElementById("completeContainer").style.display = "grid";
+        document.getElementById("completeContainer").style.marginLeft = "0px";
+        document.getElementById("completeContainer").style.width = "100%";
+        document.getElementById("sideNav").style.paddingRight = "10px";
+    }
+    else {
+        var y = document.getElementsByClassName("block");
+        var i;
+        for (i = 0; i < y.length; i++) {
+            y[i].style.display = "block";
+        }
+
+        var z = document.getElementsByClassName("ExpBlock");
+        var i;
+        for (i = 0; i < z.length; i++) {
+            z[i].style.display = "none";
         }
         document.getElementById("smallcaretExp").innerHTML = "&#9660;";
-            document.getElementById("selectedBlock").style.display = "block";
-            document.getElementById("sideNav").style.display = "block";
-            document.getElementById("completeContainer").style.display = "grid";
-            document.getElementById("sideNav").style.width = "100px";
-            document.getElementById("sideNav").style.paddingRight = "10px";
-            document.getElementById("completeContainer").style.marginLeft = "100px";
-            document.getElementById("completeContainer").style.width = "calc(100% - 100px)";
-        }
+        document.getElementById("selectedBlock").style.display = "block";
+        document.getElementById("sideNav").style.display = "block";
+        document.getElementById("completeContainer").style.display = "grid";
+        document.getElementById("sideNav").style.width = "100px";
+        document.getElementById("sideNav").style.paddingRight = "10px";
+        document.getElementById("completeContainer").style.marginLeft = "100px";
+        document.getElementById("completeContainer").style.width = "calc(100% - 100px)";
+    }
 
 
     var body = document.body,
-    html = document.documentElement;
-    var height = Math.max( body.scrollHeight, body.offsetHeight, 
+        html = document.documentElement;
+    var height = Math.max(body.scrollHeight, body.offsetHeight,
         html.clientHeight, html.scrollHeight, html.offsetHeight);
-
-    var textHeight;
-    if (window.innerWidth <= 800) {
-        textHeight = document.getElementById("leftSlideBox").offsetHeight + document.getElementById("rightSlideBox").offsetHeight;
+    if (height == window.innerHeight) {
+        document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 140 - document.getElementById("footer").offsetHeight) + "px";
     }
     else {
-        textHeight = Math.max(document.getElementById("leftSlideBox").offsetHeight, document.getElementById("rightSlideBox").offsetHeight);
-    }
-        if (height == window.innerHeight) {
-            document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 140 - document.getElementById("footer").offsetHeight) + "px";
+        if (window.innerHeight > 294 + document.getElementById("about").offsetHeight) {
+            document.getElementById("Container").style.height = (window.innerHeight - 140 - document.getElementById("footer").offsetHeight);
         }
         else {
-            if (window.innerHeight > 294 + textHeight) {
-                document.getElementById("Container").style.height = (window.innerHeight - 140 - document.getElementById("footer").offsetHeight);
-            }
-            else {
-                document.getElementById("Container").style.height = (height - document.getElementById("Container").offsetHeight - 140 - document.getElementById("footer").offsetHeight);
-            }
+            document.getElementById("Container").style.height = (height - document.getElementById("Container").offsetHeight - 140 - document.getElementById("footer").offsetHeight);
+        }
     }
 
     var pastWidth;
     window.onresize = function () {
-        let textHeight;
-        if (window.innerWidth <= 800) {
-            textHeight = document.getElementById("leftSlideBox").offsetHeight + document.getElementById("rightSlideBox").offsetHeight;
-        }
-        else {
-            textHeight = Math.max(document.getElementById("leftSlideBox").offsetHeight, document.getElementById("rightSlideBox").offsetHeight);
-        }
-
         if (window.innerWidth <= 800) {
             if (document.getElementById("sideNav").style.width != "100%") {
                 document.getElementById("sideNav").style.display = "none";
@@ -184,17 +162,17 @@
         }
         else {
             var y = document.getElementsByClassName("block");
-                var i;
-                for (i = 0; i < y.length; i++) {
-                    y[i].style.display = "block";
+            var i;
+            for (i = 0; i < y.length; i++) {
+                y[i].style.display = "block";
             }
 
             var z = document.getElementsByClassName("ExpBlock");
-                var i;
-                for (i = 0; i < z.length; i++) {
-                    z[i].style.display = "none";
-        }
-        document.getElementById("smallcaretExp").innerHTML = "&#9660;";
+            var i;
+            for (i = 0; i < z.length; i++) {
+                z[i].style.display = "none";
+            }
+            document.getElementById("smallcaretExp").innerHTML = "&#9660;";
             document.getElementById("selectedBlock").style.display = "block";
             document.getElementById("sideNav").style.display = "block";
             document.getElementById("sideNav").style.width = "100px";
@@ -204,7 +182,10 @@
             document.getElementById("completeContainer").style.width = "calc(100% - 100px)";
         }
 
-        document.getElementById("Container").style.minHeight = textHeight + 20;
+        document.getElementById("Container").style.minHeight = document.getElementById("about").offsetHeight;
+
+
+        document.getElementById("Container").style.minHeight = document.getElementById("about").offsetHeight + 20;
 
 
         var body = document.body,
@@ -215,7 +196,7 @@
             document.getElementById("Container").style.height = "" + (document.getElementById("Container").offsetHeight + (window.innerHeight - document.getElementById("Container").offsetHeight) - 140 - document.getElementById("footer").offsetHeight) + "px";
         }
         else {
-            if (window.innerHeight > 294 + textHeight) {
+            if (window.innerHeight > 294 + document.getElementById("about").offsetHeight) {
                 document.getElementById("Container").style.height = (window.innerHeight - 140 - document.getElementById("footer").offsetHeight);
             }
             else {
