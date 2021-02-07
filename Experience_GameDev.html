@@ -28,15 +28,43 @@
 
         <a class="MajorBlock" onclick="ResearchTabs()" href="javascript:void(0);">&nbsp;Research <span id="smallcaret">&#9660;</span></a>
         <a class="block" href="Research_Presentations.html">&nbsp;Research<br />&nbsp;Presentations</a>
-        <a href="Research_Papers.html" class="block">&nbsp;Research<br />&nbsp;Papers</a>
+        <a href="Research_Papers.html" class="block">&nbsp;Research<br />&nbsp;Paper</a>
         <a class="block" href="Research_SB.html">&nbsp;Sourcebook</a>
 
     </div>
     <div id="completeContainer">
         <div class="informationBox">
-            <center class="about"><br /><b class="topText">Game Development</b><br /><br />Under Construction!</center>
+            <center class="about"><br /><b class="topText">Game Development</b><br /><br />Ro-Volution is an online evolution game for PC, tablet, and phone. Players fight and scavenge for fruits in an attempt to become the largest player by the end of the round. As lead developer, I oversaw all aspects of development, but my primary focus was on item saving, game security, game mechanics, loot boxes, and all of the UI. Below is gameplay on both PC and mobile, as well as a UI demo.</center>
         </div>
 
+        <div class="slideBox">
+            <br /><div class="leftSlideBox">
+                <img id="image" src="Images/Thumbnail.png">
+            </div>
+            <div id="buttonBox"><a class="detailsButton" onclick="" href="https://www.roblox.com/games/5980893549/Alpha-Ro-Volution?refPageId=ed878130-43ac-47b8-84aa-2f85e1175d40#!/about"> Game Link </a></div>
+
+        </div>
+
+        <div class="slideBox">
+            <br /><div class="leftSlideBox">
+           
+    <b class="header">Gameplay</b><br /><video controls="controls" class="Videos"
+       name="Gameplay" src="Images/Gameplay.mov"></video>
+</div>
+            <br /><div class="rightSlideBox">
+
+                <b class="header">Menus Demo</b><br /><video controls="controls" class="Videos"
+       name="UI Demo" src="Images/UIDemo.mov"></video>
+            </div>
+        </div>
+
+        <div class="slideBox">
+            <div class="leftSlideBox">
+
+                <b class="header">Mobile Gameplay</b><br /><video controls="controls" class="Videos"
+       name="Mobile Demo" src="Images/MobileDemo.mov"></video>
+            </div>
+        </div>
 
         <div id="footer">
             <div class="footerLeft"><center><p class="contact">© 2023 by Daniel Allex</p></center></div>
@@ -108,19 +136,12 @@
     }
 
     function adjustSlides() {
-       // var slides = document.getElementById("slides");
-       // var videos = document.getElementsByClassName("Videos");
+        var videos = document.getElementsByClassName("Videos");
 
-      //  slides.style.height = slides.offsetWidth * 0.562972973 + 28;
-      //  var old = slides.style.height
-      //  slides.style.height = slides.offsetWidth * 0.562972973 + 28;
-      //  var delta = slides.style.height - old;
-      //  document.getElementById("buttonBox").style.marginTop = document.getElementById("buttonBox").style.marginTop + delta;
-
-      //  for (var i = 0; i < videos.length; i++)
-     //   {
-      //      videos[i].style.height = videos[i].offsetWidth * 0.5625;
-     //   }
+        for (var i = 0; i < videos.length; i++)
+        {
+            videos[i].style.height = videos[i].offsetWidth * 0.5625;
+        }
     }
 
 
